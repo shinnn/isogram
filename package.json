@@ -1,0 +1,35 @@
+{
+  "name": "isogram",
+  "version": "0.0.2",
+  "description": "Generate a Google Analytics tracking snippet with any 'isogrammic' parameters you like.",
+  "main": "./lib/isogram.js",
+  "bin": {
+    "isogram": "./bin/isogram.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinnn/isogram.git"
+  },
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shinnn/isogram/issues"
+  },
+  "homepage": "https://github.com/shinnn/isogram",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "cli",
+    "snippet",
+    "google analytics"
+  ],
+  "dependencies": {
+    "uglify-js": "~2.4.3",
+    "commander": "~2.1.0"
+  }
+}
