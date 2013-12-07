@@ -9,4 +9,4 @@
     __v6__ = __v1__.getElementsByTagName(__v2__)[0];
     __v5__.src = __v3__;
     __v6__.parentNode.insertBefore(__v5__, __v6__)
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+})(this, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');

@@ -8,4 +8,4 @@
   __v4__ = __v1__.scripts[0];
   __v3__.src = '//www.google-analytics.com/analytics.js';
   __v4__.parentNode.insertBefore(__v3__, __v4__)
-}(window, document, 'ga'));
+}(this, document, 'ga'));

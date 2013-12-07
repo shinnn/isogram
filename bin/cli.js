@@ -12,7 +12,7 @@ program
 	.option('-m, --minify', 'minify source')
 	.parse(process.argv);
 
-isogram(program.args, {
+isogram(program.args[0], {
   id: program.id,
   domain: program.domainName,
   minify: program.minify
