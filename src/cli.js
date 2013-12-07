@@ -5,7 +5,7 @@ var isogram = require('../lib/isogram');
 var program = require('commander');
 
 program
-	.version('0.0.3')
+	.version('@version')
 	.option('-i, --id <tracking ID>', 'change tracking-ID')
 	.option('-d, --domain-name <domain>', 'change domain')
 	.option('-m, --minify', 'minify source')

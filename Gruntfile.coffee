@@ -7,9 +7,14 @@ module.exports = (grunt) ->
   
   for paramNum, i in [5,6,7]
     replacePatterns[i] =
-      match: "#{ paramNum }params"
+      match: "file: #{ paramNum }params"
       replacement: do (paramNum) ->
         -> grunt.file.read "src/.tmp/snippets/#{ paramNum }params.js"
+  
+  replacePatterns.push
+    match: "version"
+    replacement: ->
+       grunt.file.readJSON('package.json').version
   
   grunt.initConfig
     jshint:
@@ -30,11 +35,17 @@ module.exports = (grunt) ->
     replace:
       main:
         options:
-          prefix: '@file: '
+          prefix: '@'
           patterns: replacePatterns
         files: [
-          src: ['src/*.js']
-          dest: 'lib/isogram.js'
+          {
+            src: ['src/isogram.js']
+            dest: 'lib/isogram.js'
+          }
+          {
+            src: ['src/cli.js']
+            dest: 'bin/cli.js'
+          }
         ]
     
     clean:
@@ -44,6 +55,10 @@ module.exports = (grunt) ->
       main:
         files: ['src/*.js', 'bin/*.js']
         tasks: ['uglify', 'replace', 'jshint', 'clean']
+    
+    release:
+      options:
+        bump: false
 
   defaultTasks = [
     'uglify'
@@ -54,4 +69,7 @@ module.exports = (grunt) ->
   ]
   
   grunt.task.registerTask 'default', defaultTasks
+
+  # tmp
+  grunt.task.registerTask 'publish', ['release:patch']
   

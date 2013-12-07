@@ -1,9 +1,16 @@
-module.exports = function(isogram, options) {
+/*!
+ * isogram v@version
+ * Copyright (c) 2013 Shinnosuke Watanabe
+ * Available under the MIT license
+*/
+
+module.exports = function Isogram(isogram, options) {
   
   var setting = {
     id: 'XXXXX-X',
     domain: '',
-    minify: false
+    minify: false,
+    color: false
   };
   
   for (var attrname in options) {
@@ -11,11 +18,14 @@ module.exports = function(isogram, options) {
       setting[attrname] = options[attrname];
     }
   }
-	
-  if (isogram === undefined) {
-    isogram = 'GOogle';
-  }
 
+  if (isogram === undefined) {
+    isogram = 'GoOgle';
+  } else if (isogram.length < 5 || isogram.length > 7 ) {
+    console.warn('Please input 5 or more and 7 or less characters.');
+    return;
+  }
+  
   var alphabets = isogram.split('');
   var domain = setting.domain ? ("', '" + setting.domain) : '';
 
@@ -46,8 +56,24 @@ module.exports = function(isogram, options) {
     additional = additional.replace(/\s+/g, '');
   }
   
+  var colorlize;
+  
+  if (setting.color) {
+    var ansi = require('ansi-styles');
+    colorlize = function (letters, color){
+      return ansi[color][0] + letters + ansi[color][1];
+    };
+  } else {
+    colorlize = function (letters){
+      return letters;
+    };    
+  }
+  
   for (var i=0; i < alphabets.length; i++) {
-    funcStr = funcStr.replace(new RegExp('__v' + i + '__', 'g'), alphabets[i]);
+    funcStr = funcStr.replace(
+      new RegExp('__v' + i + '__', 'g'),
+      colorlize(alphabets[i], 'green')
+    );
   }
 
   console.log(funcStr + additional);
