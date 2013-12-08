@@ -71,7 +71,7 @@ module.exports = function Isogram(isogram, options) {
   
   for (var i=0; i < alphabets.length; i++) {
     funcStr = funcStr.replace(
-      new RegExp('__v' + i + '__', 'g'),
+      new RegExp('_v' + i + '_', 'g'),
       colorlize(alphabets[i], 'green')
     );
   }

@@ -1,12 +1,12 @@
 // http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics
 
-(function (__v0__, __v1__, __v2__, __v3__, __v4__, __v5__, __v6__) {
-    __v0__.GoogleAnalyticsObject = __v4__;
-    __v0__[__v4__] = __v0__[__v4__] || function () {
-        (__v0__[__v4__].q = __v0__[__v4__].q || []).push(arguments)
-    }, __v0__[__v4__].l = +new Date;
-    __v5__ = __v1__.createElement(__v2__),
-    __v6__ = __v1__.getElementsByTagName(__v2__)[0];
-    __v5__.src = __v3__;
-    __v6__.parentNode.insertBefore(__v5__, __v6__)
+(function (_v0_, _v1_, _v2_, _v3_, _v4_, _v5_, _v6_) {
+    _v0_.GoogleAnalyticsObject = _v4_;
+    _v0_[_v4_] = _v0_[_v4_] || function () {
+        (_v0_[_v4_].q = _v0_[_v4_].q || []).push(arguments)
+    }, _v0_[_v4_].l = +new Date;
+    _v5_ = _v1_.createElement(_v2_),
+    _v6_ = _v1_.getElementsByTagName(_v2_)[0];
+    _v5_.src = _v3_;
+    _v6_.parentNode.insertBefore(_v5_, _v6_)
 })(this, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');

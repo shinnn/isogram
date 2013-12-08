@@ -14,6 +14,10 @@ Generate a Google Analytics tracking snippet with any *isogrammic* parameters yo
 npm install -g isogram
 ```
 
+### Programmatic use on Node
+
+Coming soon.
+
 ## Usage
 
 ```
@@ -32,11 +36,15 @@ The available options are:
 
 ## Example
 
+### CLI
+
+#### command
+
 ```
 isogram company --id 12345678-9 --domain-name your-company.com
 ```
 
-This command outputs the following Universal Analytics snippet:
+#### output
 
 ```javascript
 !function(c,o,m,p,a,n,y){c.GoogleAnalyticsObject=a,c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)},c[a].l=+new Date,n=o.createElement(m),y=o.getElementsByTagName(m)[0],n.src=p,y.parentNode.insertBefore(n,y)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");
@@ -50,3 +58,5 @@ ga('send', 'pageview');
 Copyright (c) 2013 Shinnosuke Watanabe All rights reserved.
 
 Unless otherwise stated, all source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
+
+[![endorse](https://api.coderwall.com/shinnn/endorsecount.png)](https://coderwall.com/shinnn)

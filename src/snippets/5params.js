@@ -1,11 +1,11 @@
-(function(__v0__, __v1__, __v2__, __v3__, __v4__) {
-  __v0__.GoogleAnalyticsObject = __v2__;
-  __v0__[__v2__] || (__v0__[__v2__] = function() {
-    (__v0__[__v2__].q = __v0__[__v2__].q || []).push(arguments)
+(function(_v0_, _v1_, _v2_, _v3_, _v4_) {
+  _v0_.GoogleAnalyticsObject = _v2_;
+  _v0_[_v2_] || (_v0_[_v2_] = function() {
+    (_v0_[_v2_].q = _v0_[_v2_].q || []).push(arguments)
   });
-  __v0__[__v2__].l = +new Date;
-  __v3__ = __v1__.createElement('script'),
-  __v4__ = __v1__.scripts[0];
-  __v3__.src = '//www.google-analytics.com/analytics.js';
-  __v4__.parentNode.insertBefore(__v3__, __v4__)
+  _v0_[_v2_].l = +new Date;
+  _v3_ = _v1_.createElement('script'),
+  _v4_ = _v1_.scripts[0];
+  _v3_.src = '//www.google-analytics.com/analytics.js';
+  _v4_.parentNode.insertBefore(_v3_, _v4_)
 }(this, document, 'ga'));
