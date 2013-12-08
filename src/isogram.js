@@ -22,7 +22,7 @@ module.exports = function Isogram(isogram, options) {
   if (isogram === undefined) {
     isogram = 'GoOgle';
   } else if (isogram.length < 5 || isogram.length > 7 ) {
-    console.warn('Please input 5 or more and 7 or less characters.');
+    console.warn('Please pass an argument with 5 or more and 7 or less characters.');
     return;
   }
   

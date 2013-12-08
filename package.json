@@ -1,6 +1,6 @@
 {
   "name": "isogram",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Generate a Google Analytics tracking snippet with any 'isogrammic' parameters you like.",
   "main": "./lib/isogram.js",
   "bin": {
@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "commander": "~2.1.0",
-    "ansi-styles": "~0.2.0"
+    "ansi-styles": "~1.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
