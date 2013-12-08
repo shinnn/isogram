@@ -61,7 +61,7 @@ module.exports = function Isogram(isogram, options) {
   if (setting.color) {
     var ansi = require('ansi-styles');
     colorlize = function (letters, color){
-      return ansi[color][0] + letters + ansi[color][1];
+      return ansi[color].open + letters + ansi[color].close;
     };
   } else {
     colorlize = function (letters){

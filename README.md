@@ -1,5 +1,6 @@
 # isogram
 
+[![NPM version](https://badge.fury.io/js/isogram.png)](http://badge.fury.io/js/isogram)
 [![Dependency Status](https://david-dm.org/shinnn/isogram.png)](https://david-dm.org/shinnn/isogram)
 [![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.png)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
@@ -32,7 +33,7 @@ The available options are:
 ## Example
 
 ```
-isogram qwerty --id 12345678-9 --domain-name example.com
+isogram company --id 12345678-9 --domain-name example.com
 ```
 
 This command outputs the following Universal Analytics snippet:
