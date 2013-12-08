@@ -33,15 +33,15 @@ The available options are:
 ## Example
 
 ```
-isogram company --id 12345678-9 --domain-name example.com
+isogram company --id 12345678-9 --domain-name your-company.com
 ```
 
 This command outputs the following Universal Analytics snippet:
 
 ```javascript
-!function(q,w,e,r,t,y){q.GoogleAnalyticsObject=r,q[r]||(q[r]=function(){(q[r].q=q[r].q||[]).push(arguments)}),q[r].l=+new Date,t=w.createElement(e),y=w.getElementsByTagName(e)[0],t.src="//www.google-analytics.com/analytics.js",y.parentNode.insertBefore(t,y)}(window,document,"script","ga");
+!function(c,o,m,p,a,n,y){c.GoogleAnalyticsObject=a,c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)},c[a].l=+new Date,n=o.createElement(m),y=o.getElementsByTagName(m)[0],n.src=p,y.parentNode.insertBefore(n,y)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");
 
-ga('create', 'UA-12345678-9', 'example.com');
+ga('create', 'UA-12345678-9', 'your-company.com');
 ga('send', 'pageview');
 ```
 
