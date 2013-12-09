@@ -27,7 +27,7 @@
   "keywords": [
     "cli",
     "snippet",
-    "google analytics",
+    "google analytics"
   ],
   "dependencies": {
     "commander": "~2.1.0",
