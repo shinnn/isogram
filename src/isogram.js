@@ -5,49 +5,40 @@
 */
 
 (function(){
-  function Isogram(isogram, options) {
-
-    var setting = {
-      id: 'XXXXX-X',
-      domain: '',
-      minify: false,
-      color: false
-    };
+  'use strict';
   
-    for (var attrname in options) {
-      if (options[attrname]) {
-        setting[attrname] = options[attrname];
-      }
-    }
+  var snippets = [
+    '@file: 5params',
+    '@file: 6params',
+    '@file: 7params'
+  ];
+  
+  // check if the arrray contains repeated values
+  function hasDuplicates (el, pos, arr) {
+    return arr.indexOf(el) !== pos;
+  }
+  
+  function Isogram(characters, options) {
+    
+    if (options) options = {};
+    if (characters === undefined) characters = 'GoOgle';
 
-    if (isogram === undefined) {
-      isogram = 'GoOgle';
-    } else if (isogram.length < 5 || isogram.length > 7 ) {
+    var params = characters.split('');
+    
+    if (params.length < 5 || params.length > 7 ) {
       throw 'Please pass an argument with 5 or more and 7 or less characters.';
     }
   
-    var alphabets = isogram.split('');
-    var domain = setting.domain ? ("', '" + setting.domain) : '';
 
-    function isDuplicate (el, pos, arr) {
-      return arr.indexOf(el) !== pos;
+    if (params.some(hasDuplicates)) {
+      throw characters + ' is not isogram.';
     }
-
-    if (alphabets.some(isDuplicate)) {
-      throw isogram + ' is not isogram.';
-    }
-    
-    var snippets = [
-      '@file: 5params',
-      '@file: 6params',
-      '@file: 7params'
-    ];
 	
-    var funcStr = snippets[alphabets.length - 5];
+    var gaLoader = snippets[params.length - 5];
 
     var colorlize;
   
-    if (setting.color) {
+    if (options.color) {
       var ansi = require('ansi-styles');
       colorlize = function (letters, color){
         return ansi[color].open + letters + ansi[color].close;
@@ -58,26 +49,35 @@
       };    
     }
   
-    for (var i=0; i < alphabets.length; i++) {
-      funcStr = funcStr.replace(
+    for (var i=0; i < params.length; i++) {
+      gaLoader = gaLoader.replace(
         new RegExp('_v' + i + '_', 'g'),
-        colorlize(alphabets[i], 'green')
+        colorlize(params[i], 'green')
       );
     }
     
-    setting.id = setting.id.replace(/^UA-/, '');
+    var id, domain;
+
+    if (options.id) {
+      id = ('' + options.id).replace(/^UA-/, '');
+    } else {
+      id = 'XXXXX-X';
+    }
     
-    var create = "ga(\"create\", \"UA-" + setting.id + domain + "\");";
-    var send = "ga(\"send\", \"pageview\");";
+    domain = options.domain ? ('", "' + options.domain) : '';
+    
+    var create = 'ga("create", "UA-' + id + domain + '");';
+    var send = 'ga("send", "pageview");';
   
     var additional = ['\n', create, send].join('\n');
   
-    if (setting.minify) {
+    if (options.minify) {
       additional = additional.replace(/\s+/g, '');
     }
 
-    return funcStr + additional;
+    return gaLoader + additional;
   }
+  
   
   var root = this;
 

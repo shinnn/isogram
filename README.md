@@ -41,16 +41,16 @@ The available options are:
 #### command
 
 ```
-isogram company --id 12345678-9 --domain-name your-company.com
+isogram Company --id 12345678-9 --domain-name your-company.com
 ```
 
 #### output
 
 ```javascript
-!function(c,o,m,p,a,n,y){c.GoogleAnalyticsObject=a,c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)},c[a].l=+new Date,n=o.createElement(m),y=o.getElementsByTagName(m)[0],n.src=p,y.parentNode.insertBefore(n,y)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");
+!function(C,o,m,p,a,n,y){C.GoogleAnalyticsObject=a,C[a]=C[a]||function(){(C[a].q=C[a].q||[]).push(arguments)},C[a].l=+new Date,n=o.createElement(m),y=o.getElementsByTagName(m)[0],n.src=p,y.parentNode.insertBefore(n,y)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");
 
-ga('create', 'UA-12345678-9', 'your-company.com');
-ga('send', 'pageview');
+ga("create", "UA-12345678-9', 'your-company.com");
+ga("send", "pageview");
 ```
 
 ## License

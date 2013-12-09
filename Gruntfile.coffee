@@ -18,7 +18,7 @@ module.exports = (grunt) ->
   
   grunt.initConfig
     jshint:
-      main: ['src/*.js', 'bin/*.js']
+      main: ['src/*.js']
       
     uglify:
       options:
@@ -50,7 +50,7 @@ module.exports = (grunt) ->
     
     clean:
       tmp: ['src/.tmp']
-      
+    
     watch:
       main:
         files: ['src/*.js', 'bin/*.js']
