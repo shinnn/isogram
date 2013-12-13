@@ -1,5 +1,5 @@
 /*!
- * isogram v@version
+ * isogram v<%= version %>
  * Copyright (c) 2013 Shinnosuke Watanabe
  * Available under the MIT license
 */
@@ -8,9 +8,9 @@
   'use strict';
   
   var snippets = [
-    '@file: 5params',
-    '@file: 6params',
-    '@file: 7params'
+    '<%= snippet_5params %>',
+    '<%= snippet_6params %>',
+    '<%= snippet_7params %>'
   ];
   
   // check if the arrray contains repeated values
@@ -78,6 +78,7 @@
     return gaLoader + additional;
   }
   
+  Isogram.version = '<%= version %>';
   
   var root = this;
 

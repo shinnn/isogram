@@ -3,20 +3,19 @@ module.exports = (grunt) ->
 
   require('load-grunt-tasks')(grunt)
   
-  replacePatterns = [];
-  
-  for paramNum, i in [5,6,7]
-    replacePatterns[i] =
-      match: "file: #{ paramNum }params"
-      replacement: do (paramNum) ->
-        -> grunt.file.read "src/.tmp/snippets/#{ paramNum }params.js"
-  
-  replacePatterns.push
-    match: "version"
-    replacement: ->
-       grunt.file.readJSON('package.json').version
+  templateData = ->
+    data =
+      version: grunt.file.readJSON('package.json').version
+
+    for paramNum in [5,6,7]
+      _snippet = grunt.file.read "src/.tmp/snippets/#{ paramNum }params.js"
+      data["snippet_#{ paramNum }params"] = _snippet
+    
+    data
   
   grunt.initConfig
+    pkg: grunt.file.readJSON 'package.json'
+
     jshint:
       main: ['src/*.js']
       
@@ -31,30 +30,22 @@ module.exports = (grunt) ->
           src: ['*.js']
           dest: 'src/.tmp/snippets'
         ]
-    
-    replace:
-      main:
-        options:
-          prefix: '@'
-          patterns: replacePatterns
-        files: [
-          {
-            src: ['src/isogram.js']
-            dest: 'lib/isogram.js'
-          }
-          {
-            src: ['src/cli.js']
-            dest: 'bin/cli.js'
-          }
-        ]
-    
+        
+    template:
+      options:
+        data: templateData
+      dist:
+        files:
+          'lib/isogram.js': ['src/isogram.js']
+          'bin/cli.js': ['src/cli.js']
+        
     clean:
       tmp: ['src/.tmp']
     
     watch:
       main:
         files: ['src/*.js', 'bin/*.js']
-        tasks: ['uglify', 'replace', 'jshint', 'clean']
+        tasks: ['uglify', 'template', 'jshint', 'clean']
     
     release:
       options:
@@ -62,7 +53,7 @@ module.exports = (grunt) ->
 
   defaultTasks = [
     'uglify'
-    'replace'
+    'template'
     'jshint'
     'clean'
     'watch'
