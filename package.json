@@ -7,7 +7,7 @@
     "isogram": "./bin/cli.js"
   },
   "scripts": {
-    "test": "grunt test",
+    "test": "node_modules/grunt-cli/bin/grunt test",
     "start": "node ./bin/cli.js"
   },
   "repository": {
@@ -45,6 +45,7 @@
     "grunt-template": "~0.2.1",
     "grunt-mocha-test": "~0.8.1",
     "grunt-mocha": "~0.4.7",
-    "chai": "~1.8.1"
+    "chai": "~1.8.1",
+    "grunt-cli": "~0.1.11"
   }
 }
