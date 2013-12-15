@@ -1,6 +1,6 @@
 {
   "name": "isogram",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Generate Google's Universal Analytics snippet with any 'isogrammic' parameters you like",
   "main": "./lib/isogram.js",
   "bin": {
@@ -42,6 +42,9 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-release": "~0.6.0",
-    "grunt-template": "~0.2.1"
+    "grunt-template": "~0.2.1",
+    "grunt-mocha-test": "~0.8.1",
+    "grunt-mocha": "~0.4.7",
+    "chai": "~1.8.1"
   }
 }

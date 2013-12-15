@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Isogram Test</title>
+  <meta name="description" content='Browser test for Isogram'>
+
+  <link rel="stylesheet" href="../../node_modules/grunt-mocha/node_modules/mocha/mocha.css" type="text/css" media="all">
+
+  <script src="../../node_modules/grunt-mocha/node_modules/mocha/mocha.js"></script>
+  <script src="../../node_modules/chai/chai.js"></script>
+  <script>
+    mocha.setup('tdd');
+  </script>
+
+  <script src="../../lib/isogram.js"></script>
+
+  <script src="spec.js"></script>
+</head>
+<body>
+  <div id="mocha"></div>
+  
+  <script>
+    mocha.run();
+  </script>
+</body>
+</html>

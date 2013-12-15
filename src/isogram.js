@@ -20,7 +20,7 @@
   
   function Isogram(characters, options) {
     
-    if (options) options = {};
+    if (!options) options = {};
     if (characters === undefined) characters = 'GoOgle';
 
     var params = characters.split('');
@@ -80,7 +80,7 @@
   
   Isogram.version = '<%= version %>';
   
-  var root = this;
+  var root = typeof window === 'object'? window: this;
 
   // some AMD build optimizers like r.js check for condition patterns like the following:
   if (typeof define == 'function' &&

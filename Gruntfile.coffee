@@ -42,10 +42,21 @@ module.exports = (grunt) ->
     clean:
       tmp: ['src/.tmp']
     
+    mocha:
+      src: ['test/**/*.html']
+      options:
+        mocha:
+          ignoreLeaks: false
+        run: true
+        reporter: 'Nyan'
+    
     watch:
       main:
         files: ['src/*.js', 'bin/*.js']
         tasks: ['uglify', 'template', 'jshint', 'clean']
+      test:
+        files: ['test/**/*']
+        tasks: ['mocha']
     
     release:
       options:
@@ -55,6 +66,7 @@ module.exports = (grunt) ->
     'uglify'
     'template'
     'jshint'
+    'mocha'
     'clean'
     'watch'
   ]
