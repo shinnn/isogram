@@ -1,6 +1,7 @@
 # isogram
 
 [![NPM version](https://badge.fury.io/js/isogram.png)](http://badge.fury.io/js/isogram)
+[![Build Status](https://travis-ci.org/shinnn/isogram.png?branch=master)](https://travis-ci.org/shinnn/isogram)
 [![Dependency Status](https://david-dm.org/shinnn/isogram.png)](https://david-dm.org/shinnn/isogram)
 [![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.png)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
