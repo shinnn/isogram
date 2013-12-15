@@ -4,9 +4,11 @@
 [![Dependency Status](https://david-dm.org/shinnn/isogram.png)](https://david-dm.org/shinnn/isogram)
 [![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.png)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
-Generate a Google Analytics tracking snippet with any *isogrammic* parameters you like
+Generate [Google's Universal Analytics snippet](https://developers.google.com/analytics/devguides/collection/analyticsjs/#quickstart) with any *isogrammic* parameters you like
 
 ## Installation
+
+Make sure you have installed [Node](http://nodejs.org/).
 
 ### CLI executable
 
@@ -55,7 +57,7 @@ ga("send", "pageview");
 
 ## License
 
-Copyright (c) 2013 Shinnosuke Watanabe All rights reserved.
+Copyright (c) 2013 [Shinnosuke Watanabe](https://github.com/shinnn) All rights reserved.
 
 Unless otherwise stated, all source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
 
