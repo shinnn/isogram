@@ -73,6 +73,8 @@ module.exports = (grunt) ->
   
   grunt.task.registerTask 'default', defaultTasks
 
+  grunt.task.registerTask 'test', ['mocha']
+  
   # tmp
   grunt.task.registerTask 'publish', ['release:patch']
   
