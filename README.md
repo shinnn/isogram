@@ -7,7 +7,9 @@
 
 Generate Google's Universal Analytics code with any *isogrammic* parameters you like
 
-## Concepts
+## Introduction
+
+### Story
 
 Here is the default tracking code of Google's Universal Analytics.
 (cf. [Introduction to Analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/))
@@ -35,6 +37,8 @@ As you can see, its parameters are `b` `o` `i` `l` `e` `r`, different from the o
 This alteration with the sense of fun is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on the more optimized and minified snippet on [his blog post](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
 
 After seeing that, I modularized Bynens's way and created this program, *isogram*.
+
+### What is *isogram*?
 
 *isogram* is a code generator. It enables us to change the parameters of the Google Analytics tracking code, as we like, as long as they are [isogrammic](http://en.wikipedia.org/wiki/Isogram).
 
