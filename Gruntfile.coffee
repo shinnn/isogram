@@ -17,6 +17,11 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON 'package.json'
 
     jshint:
+      options:
+        camelcase: true
+        trailing: true
+        indent: 2
+        node: true
       main: ['src/*.js']
       
     uglify:
@@ -53,28 +58,26 @@ module.exports = (grunt) ->
     watch:
       main:
         files: ['src/*.js', 'bin/*.js']
-        tasks: ['uglify', 'template', 'jshint', 'clean']
+        tasks: ['build']
       test:
-        files: ['test/**/*']
-        tasks: ['mocha']
+        files: ['test/**/*', '!**/.*']
+        tasks: ['test']
     
     release:
       options:
         bump: false
 
-  defaultTasks = [
+  grunt.registerTask 'test', ['mocha']
+
+  grunt.registerTask 'build', [
     'uglify'
     'template'
-    'jshint'
-    'mocha'
     'clean'
-    'watch'
+    'jshint'
+    'test'
   ]
   
-  grunt.task.registerTask 'default', defaultTasks
-
-  grunt.task.registerTask 'test', ['mocha']
+  grunt.registerTask 'default', ['build', 'watch']
   
-  # tmp
-  grunt.task.registerTask 'publish', ['release:patch']
+  grunt.registerTask 'publish', ['build', 'release:patch']
   

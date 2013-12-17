@@ -28,7 +28,6 @@
     if (params.length < 5 || params.length > 7 ) {
       throw 'Please pass an argument with 5 or more and 7 or less characters.';
     }
-  
 
     if (params.some(hasDuplicates)) {
       throw characters + ' is not isogram.';
@@ -46,7 +45,7 @@
     } else {
       colorlize = function (letters){
         return letters;
-      };    
+      };
     }
   
     for (var i=0; i < params.length; i++) {
