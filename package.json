@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt test",
-    "start": "node ./bin/cli.js"
+    "start": "node ./bin/cli.js",
+    "postinstall": "node_modules/grunt-cli/bin/grunt build"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.2",
-    "load-grunt-tasks": "~0.2.0",
+    "load-grunt-tasks": "~0.2.1",
     "grunt-contrib-jshint": "~0.7.2",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-clean": "~0.5.0",

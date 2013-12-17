@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/shinnn/isogram.png)](https://david-dm.org/shinnn/isogram)
 [![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.png)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
-Generate Google's Universal Analytics snippet] with any *isogrammic* parameters you like
+Generate Google's Universal Analytics code with any *isogrammic* parameters you like
 
 ## Concepts
 
@@ -34,11 +34,11 @@ r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 As you can see, its parameters are `b` `o` `i` `l` `e` `r`, different from the original tracking code's.
 This alteration with the sense of fun is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on the more optimized and minified snippet on [his blog post](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
 
-After seeing that, I modularized Bynens's way and created this program *isogram*.
+After seeing that, I modularized Bynens's way and created this program, *isogram*.
 
 *isogram* is a code generator. It enables us to change the parameters of the Google Analytics tracking code, as we like, as long as they are [isogrammic](http://en.wikipedia.org/wiki/Isogram).
 
-Is this useless? Indeed, it is so. but, I think, *isogram* can surprise the poeple seeing the source code of your website, [such as Bynens's commit](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966#all_commit_comments "notes on commit").
+Is this useless? Indeed, it is so. but, I think, *isogram* can surprise the poeple seeing the source of your website, [such as Bynens's commit](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966#all_commit_comments "notes on commit").
 
 ## Installation
 
@@ -88,12 +88,6 @@ isogram Company --id 12345678-9 --domain-name your-company.com
 ga("create", "UA-12345678-9', 'your-company.com");
 ga("send", "pageview");
 ```
-
-## Reference materials
-
-* [h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-* [Optimizing the asynchronous Google Analytics snippet · Mathias Bynens](http://mathiasbynens.be/notes/async-analytics-snippet)
-* [Isogram - Wikipedia, the free encyclopedia](http://en.wikipedia.org/wiki/Isogram)
 
 ## License
 
