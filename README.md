@@ -5,7 +5,38 @@
 [![Dependency Status](https://david-dm.org/shinnn/isogram.png)](https://david-dm.org/shinnn/isogram)
 [![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.png)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
-Generate [Google's Universal Analytics snippet](https://developers.google.com/analytics/devguides/collection/analyticsjs/#quickstart) with any *isogrammic* parameters you like
+Generate Google's Universal Analytics snippet] with any *isogrammic* parameters you like
+
+## Concepts
+
+Here is the default tracking code of Google's Universal Analytics.
+(cf. [Introduction to Analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/))
+
+```javascript
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+```
+
+It has the immediate invoked function with seven parameters `i` `s` `o` `g` `r` `a` `m`.
+
+On the other hand, here is the tracking code used in the [`index.html`](https://github.com/h5bp/html5-boilerplate/blob/master/index.html) of [HTML5 Boilerplate](http://html5boilerplate.com/).
+
+```javascript
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+```
+
+As you can see, its parameters are `b` `o` `i` `l` `e` `r`, different from the original tracking code's.
+This alteration with the sense of fun is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on the more optimized and minified snippet on [his blog post](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
+
+After seeing that, I modularized Bynens's way and created this program *isogram*.
+
+*isogram* is a code generator for Google Analytics. It enables us to change the parameters as we like, as long as they are [isogrammic](http://en.wikipedia.org/wiki/Isogram).
 
 ## Installation
 
@@ -55,6 +86,12 @@ isogram Company --id 12345678-9 --domain-name your-company.com
 ga("create", "UA-12345678-9', 'your-company.com");
 ga("send", "pageview");
 ```
+
+## Reference materials
+
+* [h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
+* [Optimizing the asynchronous Google Analytics snippet · Mathias Bynens](http://mathiasbynens.be/notes/async-analytics-snippet)
+* [Isogram - Wikipedia, the free encyclopedia](http://en.wikipedia.org/wiki/Isogram)
 
 ## License
 
