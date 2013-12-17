@@ -42,7 +42,7 @@ After seeing that, I modularized Bynens's way and created this program, *isogram
 
 *isogram* is a code generator. It enables us to change the parameters of the Google Analytics tracking code, as we like, as long as they are [isogrammic](http://en.wikipedia.org/wiki/Isogram).
 
-Is this useless? Indeed, it is so. but, I think, *isogram* can surprise the poeple seeing the source of your website, [such as Bynens's commit](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966#all_commit_comments "notes on commit").
+Isn't it very useful? Indeed, it is so. But, I think, *isogram* can surprise the poeple seeing the source of your website, [such as Bynens's commit](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966#all_commit_comments "notes on commit").
 
 ## Installation
 

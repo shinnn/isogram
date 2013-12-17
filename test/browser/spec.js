@@ -1,7 +1,5 @@
 var assert = chai.assert;
 
-eval(isogram());
-
 describe('isogram', function() {
   it('should return function', function() {
     assert.isFunction(isogram);

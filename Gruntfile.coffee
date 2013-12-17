@@ -3,12 +3,14 @@ module.exports = (grunt) ->
 
   require('load-grunt-tasks')(grunt)
   
+  TMP_DIR = 'src/.tmp/'
+  
   templateData = ->
     data =
       version: grunt.file.readJSON('package.json').version
 
     for paramNum in [5,6,7]
-      _snippet = grunt.file.read "src/.tmp/snippets/#{ paramNum }params.js"
+      _snippet = grunt.file.read "#{ TMP_DIR + paramNum }params.js"
       data["snippet_#{ paramNum }params"] = _snippet
     
     data
@@ -33,22 +35,46 @@ module.exports = (grunt) ->
           expand: true,
           cwd: 'src/snippets'
           src: ['*.js']
-          dest: 'src/.tmp/snippets'
+          dest: TMP_DIR
         ]
         
     template:
-      options:
-        data: templateData
-      dist:
+      main:
+        options:
+          data: templateData
         files:
           'lib/isogram.js': ['src/isogram.js']
           'bin/cli.js': ['src/cli.js']
+      no_arg:
+        options:
+          data:
+            param: ''
+        src: ['test/browser/template.html']
+        dest: 'test/browser/test1_no_arg.html'
+      five_args:
+        options:
+          data:
+            param: "'isogr'"
+        src: ['test/browser/template.html']
+        dest: 'test/browser/test2_five_args.html'
+      six_args:
+        options:
+          data:
+            param: "'isogra'"
+        src: ['test/browser/template.html']
+        dest: 'test/browser/test3_six_args.html'
+      seven_args:
+        options:
+          data:
+            param: "'isogram'"
+        src: ['test/browser/template.html']
+        dest: 'test/browser/test4_seven_args.html'
         
     clean:
-      tmp: ['src/.tmp']
+      testHtml: ['test/browser/*.html', '!**/template.html']
     
     mocha:
-      src: ['test/**/*.html']
+      src: ['test/**/*.html', '!**/template.html']
       options:
         mocha:
           ignoreLeaks: false
@@ -60,21 +86,20 @@ module.exports = (grunt) ->
         files: ['src/*.js', 'bin/*.js']
         tasks: ['build']
       test:
-        files: ['test/**/*', '!**/.*']
-        tasks: ['test']
+        files: ['test/**/*', '!**/.*', '!**/*arg*']
+        tasks: ['template', 'test', 'clean']
     
     release:
       options:
         bump: false
 
-  grunt.registerTask 'test', ['mocha']
+  grunt.registerTask 'test', ['jshint', 'mocha']
 
   grunt.registerTask 'build', [
     'uglify'
     'template'
-    'clean'
-    'jshint'
     'test'
+    'clean'
   ]
   
   grunt.registerTask 'default', ['build', 'watch']
