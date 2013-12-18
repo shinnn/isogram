@@ -33,10 +33,10 @@ e.src='//www.google-analytics.com/analytics.js';
 r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 ```
 
-As you can see, its parameters are `b` `o` `i` `l` `e` `r`, different from the original tracking code's.
-This alteration with the sense of fun is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on the more optimized and minified snippet on [his blog post](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
+As you can see, its parameters are `b` `o` `i` `l` `e` `r`, different from the original's.
+This alteration with the sense of fun is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on [the way of optimization and minification he blogged](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
 
-After seeing that, I modularized Bynens's way and created this program, *isogram*.
+After seeing that, I modularized Bynens's way as this program, *isogram*.
 
 ### What is *isogram*?
 
@@ -60,31 +60,39 @@ Coming soon.
 
 ## Usage
 
+### Use on command line
+
 ```
-isogram [characters] [options]
+isogram [parameters] [options]
 ```
 
-The available options are:
+#### Parameters
+
+Default: `GoOgle`
+
+`[parameters]` need to be a nonpattern word with 5, 6, or 7 characters, each of whom can be a valid JavaScript variable name.
+
+For example, `aPple` is valid, but `apple` is invalid.
+
+#### Options
 
 ```
 -h, --help                   output usage information
 -V, --version                output the version number
 -i, --id <tracking ID>       change tracking-ID
--d, --domain-name <domain>   change domain
--m, --minify                 minify source
+-d, --domain-name <domain>   change domain name
+-m, --minify                 minify output
 ```
 
-## Example
+#### Example
 
-### CLI
-
-#### command
+###### command
 
 ```
 isogram Company --id 12345678-9 --domain-name your-company.com
 ```
 
-#### output
+###### output
 
 ```javascript
 !function(C,o,m,p,a,n,y){C.GoogleAnalyticsObject=a,C[a]=C[a]||function(){(C[a].q=C[a].q||[]).push(arguments)},C[a].l=+new Date,n=o.createElement(m),y=o.getElementsByTagName(m)[0],n.src=p,y.parentNode.insertBefore(n,y)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");

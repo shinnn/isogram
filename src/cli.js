@@ -11,6 +11,7 @@ program
 	.option('-i, --id <tracking ID>', 'change tracking-ID')
 	.option('-d, --domain-name <domain>', 'change domain')
 	.option('-m, --minify', 'minify source')
+	.option('--no-color', 'no color')
 	.parse(process.argv);
 
 try {
@@ -18,7 +19,7 @@ try {
     id: program.id,
     domain: program.domainName,
     minify: program.minify,
-    color: true
+    color: program.noColor
   });
 } catch (e) {
   console.error(ansi.red.open + e + ansi.red.close);
