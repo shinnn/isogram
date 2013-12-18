@@ -1,6 +1,6 @@
 {
   "name": "isogram",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate Google's Universal Analytics snippet with any 'isogrammic' parameters you like",
   "main": "./lib/isogram.js",
   "bin": {
@@ -29,6 +29,8 @@
     "cli",
     "snippet",
     "google analytics",
+    "universal analytics",
+    "parameter",
     "word play"
   ],
   "dependencies": {

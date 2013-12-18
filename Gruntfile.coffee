@@ -37,7 +37,7 @@ module.exports = (grunt) ->
           src: ['*.js']
           dest: TMP_DIR
         ]
-        
+          
     template:
       main:
         options:

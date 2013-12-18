@@ -70,9 +70,9 @@ isogram [parameters] [options]
 
 Default: `GoOgle`
 
-`[parameters]` need to be a nonpattern word with 5, 6, or 7 characters, each of whom can be a valid JavaScript variable name.
+`[parameters]` need to be a **nonpattern** word with 5, 6, or 7 characters, each of whom can be a valid JavaScript variable name.
 
-For example, `aPple` is valid, but `apple` is invalid.
+For example, `yummy` is not valid, but `YuMmy` is valid.
 
 #### Options
 
