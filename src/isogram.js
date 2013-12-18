@@ -1,6 +1,6 @@
 /*!
  * isogram v<%= version %>
- * Copyright (c) 2013 Shinnosuke Watanabe
+ * (c) 2013 Shinnosuke Watanabe
  * Available under the MIT license
 */
 

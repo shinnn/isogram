@@ -15,10 +15,7 @@ Here is the default tracking code of Google's Universal Analytics.
 (cf. [Introduction to Analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/))
 
 ```javascript
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ```
 
 It has the immediate invoked function with seven parameters `i` `s` `o` `g` `r` `a` `m`.
@@ -26,11 +23,7 @@ It has the immediate invoked function with seven parameters `i` `s` `o` `g` `r` 
 On the other hand, here is the tracking code used in the [`index.html`](https://github.com/h5bp/html5-boilerplate/blob/master/index.html) of [HTML5 Boilerplate](http://html5boilerplate.com/).
 
 ```javascript
-(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-e.src='//www.google-analytics.com/analytics.js';
-r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 ```
 
 As you can see, its parameters are `b` `o` `i` `l` `e` `r`, different from the original's.
