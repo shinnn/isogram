@@ -7,6 +7,8 @@
 
 Generate Google's Universal Analytics code with any *isogrammic* parameters you like
 
+![Alt text](./demo.gif "Screencast")
+
 ## Introduction
 
 ### Story

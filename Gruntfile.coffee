@@ -79,7 +79,7 @@ module.exports = (grunt) ->
         mocha:
           ignoreLeaks: false
         run: true
-        reporter: 'Nyan'
+        reporter: 'Spec'
     
     watch:
       main:
