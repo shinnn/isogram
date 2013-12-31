@@ -1,6 +1,6 @@
 {
   "name": "isogram",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Generate Google's Universal Analytics snippet with any 'isogrammic' parameters you like",
   "main": "./lib/isogram.js",
   "bin": {
@@ -8,8 +8,7 @@
   },
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt test",
-    "start": "node ./bin/cli.js",
-    "postinstall": "node_modules/grunt-cli/bin/grunt build"
+    "start": "node ./bin/cli.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,7 @@
     "url": "https://github.com/shinnn/isogram/issues"
   },
   "homepage": "https://github.com/shinnn/isogram",
-  "readmeFilename": "README.md",
+  "readmeFilename": "./README.md",
   "keywords": [
     "cli",
     "snippet",
