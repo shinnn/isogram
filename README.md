@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/shinnn/isogram.png?branch=master)](https://travis-ci.org/shinnn/isogram)
 [![Dependency Status](https://david-dm.org/shinnn/isogram.png)](https://david-dm.org/shinnn/isogram)
 [![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.png)](https://david-dm.org/shinnn/isogram#info=devDependencies)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shinnn/isogram/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Generate Google's Universal Analytics code with any *isogrammic* parameters you like
 
