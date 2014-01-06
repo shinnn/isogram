@@ -1,6 +1,6 @@
 /*!
  * isogram v<%= version %>
- * (c) 2013 - 2014 Shinnosuke Watanabe
+ * (c) 2013 - <%= year %> Shinnosuke Watanabe
  * Available under the MIT license
 */
 
@@ -49,11 +49,11 @@
   
     if (options.color) {
       var ansi = require('ansi-styles');
-      colorlize = function (letters, color){
+      colorlize = function (letters, color) {
         return ansi[color].open + letters + ansi[color].close;
       };
     } else {
-      colorlize = function (letters){
+      colorlize = function (letters) {
         return letters;
       };
     }
@@ -104,11 +104,8 @@
     });
   }
   // check for `exports` after `define` in case a build optimizer adds an `exports` object
-  else if (typeof module !== 'undefined') {
-    // in Node.js or RingoJS
-    if (module.exports) {
-      (module.exports = Isogram).isogram = Isogram;
-    }
+  else if (typeof module !== 'undefined' && module.exports) {
+    (module.exports = Isogram).isogram = Isogram;
   }
   else {
     // in a browser or Rhino

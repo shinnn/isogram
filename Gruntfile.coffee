@@ -8,6 +8,7 @@ module.exports = (grunt) ->
   templateData = ->
     data =
       version: grunt.file.readJSON('package.json').version
+      year: grunt.template.today 'yyyy'
 
     for paramNum in [5,6,7]
       _snippet = grunt.file.read "#{ TMP_DIR + paramNum }params.js"

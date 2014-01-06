@@ -6,7 +6,7 @@ var program = require('commander');
 var ansi = require('ansi-styles');
 
 program
-	.version('0.2.1')
+	.version('0.3.0')
   .usage('[characters (5 or more and 7 or less)] [options]')
 	.option('-i, --id <tracking ID>', 'change tracking-ID')
 	.option('-d, --domain-name <domain>', 'change domain')
@@ -19,8 +19,9 @@ try {
     id: program.id,
     domain: program.domainName,
     minify: program.minify,
-    color: !program.noColor
+    color: program.color
   });
+  
 } catch (e) {
   console.error(ansi.red.open + e + ansi.red.close);
   return;

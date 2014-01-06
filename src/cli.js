@@ -19,8 +19,9 @@ try {
     id: program.id,
     domain: program.domainName,
     minify: program.minify,
-    color: !program.noColor
+    color: program.color
   });
+  
 } catch (e) {
   console.error(ansi.red.open + e + ansi.red.close);
   return;

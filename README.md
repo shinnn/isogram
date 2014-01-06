@@ -78,6 +78,7 @@ For example, `yummy` is not valid, but `YuMmy` is valid.
 -i, --id <tracking ID>       change tracking-ID
 -d, --domain-name <domain>   change domain name
 -m, --minify                 minify output
+--no-color                   output in a single color
 ```
 
 #### Example
