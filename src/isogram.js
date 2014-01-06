@@ -1,10 +1,10 @@
 /*!
  * isogram v<%= version %>
- * (c) 2013 Shinnosuke Watanabe
+ * (c) 2013 - 2014 Shinnosuke Watanabe
  * Available under the MIT license
 */
 
-(function(){
+(function() {
   'use strict';
   
   var snippets = [
@@ -18,10 +18,10 @@
     return arr.indexOf(el) !== pos;
   }
   
-  var objToString = Object.prototype.toString;
+  var toString = Object.prototype.toString;
   
   function isObject (variable) {
-    return objToString.call(variable) === '[object Object]';
+    return toString.call(variable) === '[object Object]';
   }
   
   function Isogram (characters, options) {

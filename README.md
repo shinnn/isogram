@@ -6,9 +6,9 @@
 [![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.png)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shinnn/isogram/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-Generate Google's Universal Analytics code with any *isogrammic* parameters you like
+Generates Google's Universal Analytics code with any *isogrammic* parameters you like
 
-![Screencast](./demo.gif "Screencast")
+![Screencast](https://raw.github.com/shinnn/isogram/master/demo.gif "Screencast")
 
 ## Introduction
 
@@ -99,7 +99,7 @@ ga("send", "pageview");
 
 ## License
 
-Copyright (c) 2013 [Shinnosuke Watanabe](https://github.com/shinnn) All rights reserved.
+Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn) All rights reserved.
 
 Unless otherwise stated, all source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
 
