@@ -6,7 +6,7 @@ var program = require('commander');
 var ansi = require('ansi-styles');
 
 program
-	.version('0.2.0')
+	.version('0.2.1')
   .usage('[characters (5 or more and 7 or less)] [options]')
 	.option('-i, --id <tracking ID>', 'change tracking-ID')
 	.option('-d, --domain-name <domain>', 'change domain')
