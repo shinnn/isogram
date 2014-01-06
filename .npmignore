@@ -1,1 +1,6 @@
-/.*
+.travis.yml
+.editorconfig
+src/
+test/
+Gruntfile.coffee
+demo.gif
