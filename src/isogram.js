@@ -13,7 +13,7 @@
     '<%= snippet_7params %>'
   ];
   
-  // check if the arrray contains repeated values
+  // check if an array contains repeated values
   function hasDuplicates (el, pos, arr) {
     return arr.indexOf(el) !== pos;
   }
@@ -98,8 +98,8 @@
     root.isogram = Isogram;
 
     // define as an anonymous module so, through path mapping, it can be
-    // referenced as the "underscore" module
-    define(function() {
+    // referenced as the "isogram" module
+    define('isogram', [], function() {
       return Isogram;
     });
   }
