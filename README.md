@@ -34,7 +34,7 @@ This alteration with the sense of fun is [authored by Mathias Bynens](https://gi
 
 After seeing that, I modularized Bynens's way as this program, *isogram*.
 
-### What is *isogram*?
+### What it does
 
 *isogram* is a code generator. It enables us to change the parameters of the Google Analytics tracking code, as we like, as long as they are [isogrammic](http://en.wikipedia.org/wiki/Isogram).
 
