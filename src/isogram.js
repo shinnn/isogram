@@ -18,10 +18,10 @@
     return arr.indexOf(el) !== pos;
   }
   
-  var toString = Object.prototype.toString;
+  var toStr = Object.prototype.toString;
   
   function isObject (variable) {
-    return toString.call(variable) === '[object Object]';
+    return toStr.call(variable) === '[object Object]';
   }
   
   function Isogram (characters, options) {
