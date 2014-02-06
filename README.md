@@ -30,7 +30,7 @@ On the other hand, here is the tracking code used in the [`index.html`](https://
 ```
 
 As you can see, its parameters are `b` `o` `i` `l` `e` `r`, different from the original's.
-This alteration with the sense of fun is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on [the way of optimization and minification he blogged](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
+This alteration full of fun is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on [the way of optimization and minification he blogged](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
 
 After seeing that, I modularized Bynens's way as this program, *isogram*.
 
