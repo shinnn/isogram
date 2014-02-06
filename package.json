@@ -7,7 +7,7 @@
     "isogram": "./bin/cli.js"
   },
   "scripts": {
-    "test": "node_modules/grunt-cli/bin/grunt build",
+    "test": "grunt build",
     "start": "node ./bin/cli.js"
   },
   "repository": {
