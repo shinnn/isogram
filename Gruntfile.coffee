@@ -75,12 +75,13 @@ module.exports = (grunt) ->
       testHtml: ['test/browser/*.html', '!**/template.html']
     
     mocha:
-      src: ['test/**/*.html', '!**/template.html']
       options:
         mocha:
           ignoreLeaks: false
         run: true
         reporter: 'Spec'
+      browser:
+        src: ['test/**/*.html', '!**/template.html']
     
     watch:
       main:
