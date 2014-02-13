@@ -1,9 +1,9 @@
 module.exports = (grunt) ->
   'use strict'
 
-  require('load-grunt-tasks')(grunt)
+  require('load-grunt-tasks') grunt
   
-  TMP_DIR = 'src/.tmp/'
+  TMP = 'src/.tmp/'
   
   templateData = ->
     data =
@@ -11,7 +11,7 @@ module.exports = (grunt) ->
       year: grunt.template.today 'yyyy'
 
     for paramNum in [5,6,7]
-      _snippet = grunt.file.read "#{ TMP_DIR + paramNum }params.js"
+      _snippet = grunt.file.read "#{ TMP + paramNum }params.js"
       data["snippet_#{ paramNum }params"] = _snippet
     
     data
@@ -36,7 +36,7 @@ module.exports = (grunt) ->
           expand: true,
           cwd: 'src/snippets'
           src: ['*.js']
-          dest: TMP_DIR
+          dest: TMP
         ]
           
     template:
@@ -79,7 +79,7 @@ module.exports = (grunt) ->
         mocha:
           ignoreLeaks: false
         run: true
-        reporter: 'Spec'
+        reporter: 'spec'
       browser:
         src: ['test/**/*.html', '!**/template.html']
     
