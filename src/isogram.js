@@ -36,9 +36,17 @@
     var params = characters.split('');
     
     if (params.length < 5 || params.length > 7 ) {
-      throw 'Please pass an argument with 5 or more and 7 or less characters.';
+      throw 'Please pass an argument with five, six or seven characters.';
     }
-
+		
+		for (var i=0; i < params.length; i++) {
+			try {
+				new Function('this.' + params[i]).call({});
+			} catch (e) {
+				throw params[i] + ' is not a valid JavaScript variable name.';
+			}
+		}
+		
     if (params.some(hasDuplicates)) {
       throw characters + ' is not isogram.';
     }
@@ -58,7 +66,7 @@
       };
     }
   
-    for (var i=0; i < params.length; i++) {
+    for (i=0; i < params.length; i++) {
       gaLoader = gaLoader.replace(
         new RegExp('_v' + i + '_', 'g'),
         colorlize(params[i], 'green')
