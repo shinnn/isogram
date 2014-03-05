@@ -99,7 +99,7 @@ ga("send", "pageview");
 
 ## License
 
-Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn) All rights reserved.
+Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Unless otherwise stated, all source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
 
