@@ -24,6 +24,26 @@
     return toStr.call(variable) === '[object Object]';
   }
   
+  function quote (str) {
+    return '"' + str + '"';
+  }
+  
+  function printArray (arr) {
+    var result = '';
+    for (var i=0; i < arr.length; i++) {
+      if (i === 0) {
+        result += quote(arr[i]);
+      } else {
+        if (i < arr.length - 1) {
+          result += ', ' + quote(arr[i]);
+        } else {
+          result += ' and ' + quote(arr[i]);
+        }
+      }
+    }
+    return result;
+  }
+  
   function Isogram (characters, options) {
     if (isObject(characters)) {
       options = characters;
@@ -35,22 +55,32 @@
 
     var params = characters.split('');
     
-    if (params.length < 5 || params.length > 7 ) {
-      throw 'Please pass an argument with five, six or seven characters.';
-    }
-		
+    var _invalidChars = [];
     for (var i=0; i < params.length; i++) {
       try {
-        new Function('this.' + params[i]).call({});
+        new Function('var ' + params[i])();
       } catch (e) {
-        throw params[i] + ' is not a valid JavaScript variable name.';
+        _invalidChars.push(params[i]);
       }
+    }
+    if (_invalidChars.length > 0) {
+      var _message = '';
+      if (_invalidChars.length === 1) {
+        _message = ' is not a valid JavaScript parameter name.';
+      } else {
+        _message = ' are not valid JavaScript parameter names.';
+      }
+      throw printArray(_invalidChars) + _message;
     }
 		
     if (params.some(hasDuplicates)) {
       throw characters + ' is not isogram.';
     }
 	
+    if (params.length < 5 || params.length > 7) {
+      throw 'Please pass an argument with five, six or seven characters.';
+    }
+
     var gaLoader = snippets[params.length - 5];
 
     var colorlize;
