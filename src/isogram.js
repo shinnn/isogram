@@ -39,13 +39,13 @@
       throw 'Please pass an argument with five, six or seven characters.';
     }
 		
-		for (var i=0; i < params.length; i++) {
-			try {
-				new Function('this.' + params[i]).call({});
-			} catch (e) {
-				throw params[i] + ' is not a valid JavaScript variable name.';
-			}
-		}
+    for (var i=0; i < params.length; i++) {
+      try {
+        new Function('this.' + params[i]).call({});
+      } catch (e) {
+        throw params[i] + ' is not a valid JavaScript variable name.';
+      }
+    }
 		
     if (params.some(hasDuplicates)) {
       throw characters + ' is not isogram.';

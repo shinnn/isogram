@@ -14,19 +14,19 @@ describe('isogram', function() {
 
   it("should not accept four characters", function() {
     assert.throws(function(){
-			isogram('abcd');
-		});
+      isogram('abcd');
+    });
   });
 
   it("should not accept eight characters", function() {
     assert.throws(function(){
-			isogram('abcdefgh');
-		});
+      isogram('abcdefgh');
+    });
   });
 
   it("should not accept numbers", function() {
     assert.throws(function(){
-			isogram('12345');
-		});
+      isogram('12345');
+    });
   });
 });
