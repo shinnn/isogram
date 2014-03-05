@@ -21,6 +21,7 @@ module.exports = (grunt) ->
 
     jshint:
       options:
+        evil: true
         camelcase: true
         trailing: true
         indent: 2
@@ -45,7 +46,7 @@ module.exports = (grunt) ->
           data: templateData
         files:
           'lib/isogram.js': ['src/isogram.js']
-          'bin/cli.js': ['src/cli.js']
+          'lib/cli.js': ['src/cli.js']
       no_arg:
         options:
           data:
@@ -70,9 +71,15 @@ module.exports = (grunt) ->
             param: "'isogram'"
         src: ['test/browser/template.html']
         dest: 'test/browser/test4_seven_args.html'
-        
+    
     clean:
       testHtml: ['test/browser/*.html', '!**/template.html']
+      
+    mochaTest:
+      test:
+        options:
+          reporter: 'spec'
+        src: ['test/node/*.js']
     
     mocha:
       options:
@@ -95,7 +102,7 @@ module.exports = (grunt) ->
       options:
         bump: false
 
-  grunt.registerTask 'test', ['jshint', 'mocha']
+  grunt.registerTask 'test', ['jshint', 'mochaTest', 'mocha']
 
   grunt.registerTask 'build', [
     'uglify'
