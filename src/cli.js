@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var isogram = require('../lib/isogram');
+var isogram = require('./isogram');
 
 var program = require('commander');
 var ansi = require('ansi-styles');

@@ -2,13 +2,13 @@
   "name": "isogram",
   "version": "0.3.0",
   "description": "Generates Google Analytics snippet with any 'isogrammic' parameters you like",
-  "main": "./lib/isogram.js",
+  "main": "lib/isogram.js",
   "bin": {
-    "isogram": "./bin/cli.js"
+    "isogram": "bin/isogram"
   },
   "scripts": {
     "test": "grunt build",
-    "start": "node ./bin/cli.js"
+    "start": "node ./bin/isogram"
   },
   "repository": {
     "type": "git",
