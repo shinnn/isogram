@@ -21,12 +21,25 @@ module.exports = (grunt) ->
 
     jshint:
       options:
-        evil: true
         camelcase: true
         trailing: true
         indent: 2
+        evil: true
+        browser: true
         node: true
+        globals:
+          'it': true
+          'describe': true
       main: ['src/*.js']
+      test_node: ['test/node/*.js']
+      test_browser:
+        options:
+          globals:
+            'chai': true
+            'isogram': true
+            'it': true
+            'describe': true
+        src: ['test/browser/*.js']
       
     uglify:
       options:
