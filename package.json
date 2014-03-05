@@ -1,6 +1,6 @@
 {
   "name": "isogram",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Generates Google Analytics snippet with any 'isogrammic' parameters you like",
   "main": "lib/isogram.js",
   "bin": {
