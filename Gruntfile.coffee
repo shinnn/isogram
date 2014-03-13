@@ -52,7 +52,7 @@ module.exports = (grunt) ->
           src: ['*.js']
           dest: TMP
         ]
-          
+    
     template:
       main:
         options:
@@ -65,28 +65,28 @@ module.exports = (grunt) ->
           data:
             param: ''
         src: ['test/browser/template.html']
-        dest: 'test/browser/test1_no_arg.html'
+        dest: '<%= clean.test_html %>/test1_no_arg.html'
       five_args:
         options:
           data:
             param: "'isogr'"
         src: ['test/browser/template.html']
-        dest: 'test/browser/test2_five_args.html'
+        dest: '<%= clean.test_html %>/test2_five_args.html'
       six_args:
         options:
           data:
             param: "'isogra'"
         src: ['test/browser/template.html']
-        dest: 'test/browser/test3_six_args.html'
+        dest: '<%= clean.test_html %>/test3_six_args.html'
       seven_args:
         options:
           data:
             param: "'isogram'"
         src: ['test/browser/template.html']
-        dest: 'test/browser/test4_seven_args.html'
+        dest: '<%= clean.test_html %>/test4_seven_args.html'
     
     clean:
-      testHtml: ['test/browser/*.html', '!**/template.html']
+      test_html: ['test/browser/pages']
       
     mochaTest:
       test:
@@ -101,7 +101,7 @@ module.exports = (grunt) ->
         run: true
         reporter: 'Spec'
       browser:
-        src: ['test/**/*.html', '!**/template.html']
+        src: ['<%= clean.test_html %>/*.html']
     
     watch:
       main:
@@ -115,16 +115,22 @@ module.exports = (grunt) ->
       options:
         bump: false
 
-  grunt.registerTask 'test', ['jshint', 'mochaTest', 'mocha']
-
   grunt.registerTask 'build', [
     'uglify'
+    'template:main'
+    'jshint'
+  ]
+  
+  grunt.registerTask 'test', [
+    'uglify'
     'template'
-    'test'
+    'jshint'
+    'mochaTest'
+    'mocha'
     'clean'
   ]
   
-  grunt.registerTask 'default', ['build', 'watch']
+  grunt.registerTask 'default', ['test', 'watch']
   
-  grunt.registerTask 'publish', ['build', 'release:patch']
+  grunt.registerTask 'publish', ['test', 'release:patch']
   
