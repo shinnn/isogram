@@ -13,11 +13,6 @@
     '<%= snippet_7params %>'
   ];
   
-  // check if an array contains repeated values
-  function hasDuplicates (el, pos, arr) {
-    return arr.indexOf(el) !== pos;
-  }
-  
   var toStr = Object.prototype.toString;
   
   function isObject (variable) {
@@ -42,6 +37,11 @@
       }
     }
     return result;
+  }
+  
+  function colorize (str) {
+    // green
+    return '\x1b[32m' + str + '\x1b[39m';
   }
   
   function Isogram (characters, options) {
@@ -73,40 +73,41 @@
       throw printArray(_invalidChars) + _message;
     }
 		
-    if (params.some(hasDuplicates)) {
-      throw characters + ' is not isogram.';
+    var duplicates = [];
+    var charactersCopy = characters;
+    for (i=0; i < charactersCopy.length; i++) {
+      if (charactersCopy.lastIndexOf(params[i]) !== i) {
+        duplicates.push(params[i]);
+        charactersCopy = charactersCopy.replace(
+          new RegExp(params[i], 'g'),
+          ''
+        );
+      }
+    }
+    
+    if (duplicates.length > 0) {
+      throw printArray(duplicates) +
+            (duplicates.length === 1? ' is': ' are') +
+            ' duplicated.';
     }
 	
     if (params.length < 5 || params.length > 7) {
-      throw 'Please pass an argument with five, six or seven characters.';
+      throw 'Please pass an argument with 5, 6 or 7 characters.';
     }
 
     var gaLoader = snippets[params.length - 5];
 
-    var colorlize;
-  
-    if (options.color) {
-      var ansi = require('ansi-styles');
-      colorlize = function (letters, color) {
-        return ansi[color].open + letters + ansi[color].close;
-      };
-    } else {
-      colorlize = function (letters) {
-        return letters;
-      };
-    }
-  
     for (i=0; i < params.length; i++) {
       gaLoader = gaLoader.replace(
         new RegExp('_v' + i + '_', 'g'),
-        colorlize(params[i], 'green')
+        options.color? colorize(params[i]): params[i]
       );
     }
     
     var id, domain;
 
     if (options.id) {
-      id = ('' + options.id).replace(/^UA-/, '');
+      id = options.id.toString().replace(/^UA-/, '');
     } else {
       id = 'XXXXX-X';
     }
