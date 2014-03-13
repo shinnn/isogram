@@ -1,7 +1,7 @@
 var isogram = require('./isogram');
 
 var program = require('commander');
-var ansi = require('ansi-styles');
+var chalk = require('chalk');
 
 program
   .version('<%= version %>')
@@ -21,7 +21,7 @@ try {
   });
   
 } catch (e) {
-  console.error(ansi.red.open + e + ansi.red.close);
+  console.error(chalk.red(e));
   return;
 }
 
