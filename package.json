@@ -46,7 +46,7 @@
     "grunt-contrib-watch": "^0.6.0",
     "grunt-release": "~0.7.0",
     "grunt-template": "~0.2.3",
-    "grunt-mocha-test": "~0.9.4",
+    "grunt-mocha-test": "^0.10.0",
     "grunt-mocha": "~0.4.10",
     "chai": "~1.9.0"
   }
