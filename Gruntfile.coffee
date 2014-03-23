@@ -27,6 +27,7 @@ module.exports = (grunt) ->
         evil: true
         browser: true
         node: true
+        esnext: true
         globals:
           'it': true
           'describe': true
@@ -58,8 +59,8 @@ module.exports = (grunt) ->
         options:
           data: templateData
         files:
-          'lib/isogram.js': ['src/isogram.js']
-          'lib/cli.js': ['src/cli.js']
+          'lib/isogram.js': ['src/isogram-es6.js']
+          'lib/cli.js': ['src/cli-es6.js']
       no_arg:
         options:
           data:
@@ -84,7 +85,7 @@ module.exports = (grunt) ->
             param: "'isogram'"
         src: ['test/browser/template.html']
         dest: '<%= clean.test_html %>/test4_seven_args.html'
-    
+
     clean:
       test_html: ['test/browser/pages']
       
@@ -114,17 +115,28 @@ module.exports = (grunt) ->
     release:
       options:
         bump: false
-
+    
+    es6transpiler:
+      dist:
+        options:
+          globals:
+            define: true
+        files:
+          'lib/cli.js': ['lib/cli.js']
+          'lib/isogram.js': ['lib/isogram.js']
+    
   grunt.registerTask 'build', [
+    'jshint'
     'uglify'
     'template:main'
-    'jshint'
+    'es6transpiler'
   ]
   
   grunt.registerTask 'test', [
+    'jshint'
     'uglify'
     'template'
-    'jshint'
+    'es6transpiler'
     'mochaTest'
     'mocha'
     'clean'

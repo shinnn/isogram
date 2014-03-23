@@ -19,10 +19,8 @@ try {
     minify: program.minify,
     color: program.color
   });
+  console.log(output);
   
 } catch (e) {
   console.error(chalk.red(e));
-  return;
 }
-
-console.log(output);

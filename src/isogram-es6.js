@@ -7,30 +7,31 @@
 (function() {
   'use strict';
   
-  var snippets = [
+  const snippets = [
     '<%= snippet_5params %>',
     '<%= snippet_6params %>',
     '<%= snippet_7params %>'
   ];
   
-  var toStr = Object.prototype.toString;
+  const toStr = Object.prototype.toString;
   
   function isObject (variable) {
     return toStr.call(variable) === '[object Object]';
   }
   
   function arrayToSentence (arr) {
-    var result = '';
-    for (var i=0; i < arr.length; i++) {
-      if (i > 0) {
-        if (i < arr.length - 1) {
+    let result = '';
+    arr.forEach((elm, index) => {
+      if (index > 0) {
+        if (index < arr.length - 1) {
           result += ', ';
         } else {
           result += ' and ';
         }
       }
-      result += '"' + arr[i] + '"';
-    }
+      result += '"' + elm + '"';
+    });
+
     return result;
   }
   
@@ -39,38 +40,35 @@
     return '\x1b[32m' + str + '\x1b[39m';
   }
   
-  function Isogram (characters, options) {
+  function Isogram (characters = 'GoOgle', options = {}) {
     if (isObject(characters)) {
       options = characters;
-      characters = undefined;
+      characters = 'GoOgle';
     }
-
-    if (!options) options = {};
-    if (characters === undefined) characters = 'GoOgle';
 
     var params = characters.split('');
     
-    var _invalidChars = [];
-    for (var i=0; i < params.length; i++) {
+    let invalidChars = [];
+    params.forEach((elm) => {
       try {
-        new Function('var ' + params[i])();
+        new Function('var ' + elm)();
       } catch (e) {
-        _invalidChars.push(params[i]);
+        invalidChars.push(elm);
       }
-    }
-    if (_invalidChars.length > 0) {
-      var _message = '';
-      if (_invalidChars.length === 1) {
-        _message = ' is not a valid JavaScript parameter name.';
+    });
+    if (invalidChars.length > 0) {
+      let message = '';
+      if (invalidChars.length === 1) {
+        message = ' is not a valid JavaScript parameter name.';
       } else {
-        _message = ' are not valid JavaScript parameter names.';
+        message = ' are not valid JavaScript parameter names.';
       }
-      throw arrayToSentence(_invalidChars) + _message;
+      throw arrayToSentence(invalidChars) + message;
     }
 		
-    var duplicates = [];
-    var charactersCopy = characters;
-    for (i=0; i < charactersCopy.length; i++) {
+    let duplicates = [];
+    let charactersCopy = characters;
+    for (let i=0; i < charactersCopy.length; i++) {
       if (charactersCopy.lastIndexOf(params[i]) !== i) {
         duplicates.push(params[i]);
         charactersCopy = charactersCopy.replace(
@@ -91,13 +89,13 @@
     }
 
     var gaLoader = snippets[params.length - 5];
-
-    for (i=0; i < params.length; i++) {
+    
+    params.forEach((elm, index) => {
       gaLoader = gaLoader.replace(
-        new RegExp('_v' + i + '_', 'g'),
-        options.color? colorize(params[i]): params[i]
+        new RegExp('_v' + index + '_', 'g'),
+        options.color? colorize(elm): elm
       );
-    }
+    });
     
     var id, domain;
 
@@ -109,10 +107,11 @@
     
     domain = options.domain ? ('", "' + options.domain) : '';
     
-    var create = 'ga("create", "UA-' + id + domain + '");';
-    var send = 'ga("send", "pageview");';
-  
-    var additional = ['\n', create, send].join('\n');
+    var additional = [
+      '\n',
+      'ga("create", "UA-' + id + domain + '");',
+      'ga("send", "pageview");'
+    ].join('\n');
   
     if (options.minify) {
       additional = additional.replace(/\s+/g, '');
