@@ -13,7 +13,7 @@ program
   .parse(process.argv);
 
 try {
-  var output = isogram(program.args[0], {
+  let output = isogram(program.args[0], {
     id: program.id,
     domain: program.domainName,
     minify: program.minify,
