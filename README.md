@@ -1,11 +1,11 @@
 # isogram
 
-[![NPM version](https://badge.fury.io/js/isogram.png)](http://badge.fury.io/js/isogram)
-[![Build Status](https://travis-ci.org/shinnn/isogram.png?branch=master)](https://travis-ci.org/shinnn/isogram)
-[![Dependency Status](https://david-dm.org/shinnn/isogram.png)](https://david-dm.org/shinnn/isogram)
-[![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.png)](https://david-dm.org/shinnn/isogram#info=devDependencies)
+[![NPM version](https://badge.fury.io/js/isogram.svg)](http://badge.fury.io/js/isogram)
+[![Build Status](https://travis-ci.org/shinnn/isogram.svg?branch=master)](https://travis-ci.org/shinnn/isogram)
+[![Dependency Status](https://david-dm.org/shinnn/isogram.svg?theme=shields.io)](https://david-dm.org/shinnn/isogram)
+[![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.svg?theme=shields.io)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
-Generates Google's Universal Analytics code with any *isogrammic* parameters you like
+A [Node](http://nodejs.org/) module to generate Google Analytics code with any *isogrammic* parameters you like
 
 ![Screencast](https://raw.github.com/shinnn/isogram/master/demo.gif "Screencast")
 
@@ -41,7 +41,7 @@ Isn't it very useful? Indeed, it is so. But, I think, *isogram* can surprise the
 
 ## Installation
 
-Make sure you have installed [Node](http://nodejs.org/).
+Install with [npm](https://www.npmjs.org/). (Make sure you have installed [Node](http://nodejs.org/download/).)
 
 ### CLI executable
 
