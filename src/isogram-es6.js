@@ -132,7 +132,7 @@
 
     // define as an anonymous module so, through path mapping, it can be
     // referenced as the "isogram" module
-    define('isogram', [], function() {
+    define([], function() {
       return Isogram;
     });
   }
