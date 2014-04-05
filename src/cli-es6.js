@@ -1,3 +1,5 @@
+'use strict';
+
 var isogram = require('./isogram');
 
 var program = require('commander');
