@@ -2,8 +2,8 @@
 
 [![NPM version](https://badge.fury.io/js/isogram.svg)](http://badge.fury.io/js/isogram)
 [![Build Status](https://travis-ci.org/shinnn/isogram.svg?branch=master)](https://travis-ci.org/shinnn/isogram)
-[![Dependency Status](https://david-dm.org/shinnn/isogram.svg?theme=shields.io)](https://david-dm.org/shinnn/isogram)
-[![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.svg?theme=shields.io)](https://david-dm.org/shinnn/isogram#info=devDependencies)
+[![Dependency Status](https://david-dm.org/shinnn/isogram.svg)](https://david-dm.org/shinnn/isogram)
+[![devDependency Status](https://david-dm.org/shinnn/isogram/dev-status.svg)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
 A [Node](http://nodejs.org/) module to generate Google Analytics code with any *isogrammic* parameters you like
 
@@ -101,6 +101,6 @@ ga("send", "pageview");
 
 Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
 
-Unless otherwise stated, all source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
+Unless otherwise stated, all source code in this repository is licensed under [the MIT license](./LICENSE).
 
 [![endorse](https://api.coderwall.com/shinnn/endorsecount.png)](https://coderwall.com/shinnn)
