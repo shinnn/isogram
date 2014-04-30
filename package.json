@@ -33,6 +33,7 @@
     "cli",
     "snippet",
     "source",
+    "analytics",
     "google analytics",
     "universal analytics",
     "parameter",
@@ -51,7 +52,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-es6-transpiler": "^0.1.0",
     "grunt-mocha": "~0.4.10",
-    "grunt-mocha-test": "^0.10.0",
+    "grunt-mocha-test": "^0.10.1",
     "grunt-release": "~0.7.0",
     "grunt-template": "~0.2.3",
     "load-grunt-tasks": "^0.4.0"
