@@ -1,9 +1,9 @@
 module.exports = (grunt) ->
   'use strict'
 
-  require('load-grunt-tasks') grunt
-  
-  TMP = 'src/.tmp/'
+  require('jit-grunt') grunt, {
+    es6transpiler: 'grunt-es6-transpiler'
+  }
   
   templateData = ->
     data =
@@ -11,7 +11,7 @@ module.exports = (grunt) ->
       year: grunt.template.today 'yyyy'
 
     for paramNum in [5,6,7]
-      _snippet = grunt.file.read "#{ TMP + paramNum }params.js"
+      _snippet = grunt.file.read "tmp/snippets-min/#{ paramNum }params.js"
       data["snippet_#{ paramNum }params"] = _snippet
     
     data
@@ -32,10 +32,10 @@ module.exports = (grunt) ->
         preserveComments: false
       snippets:
         files: [
-          expand: true,
+          expand: true
           cwd: 'src/snippets'
           src: ['*.js']
-          dest: TMP
+          dest: 'tmp/snippets-min'
         ]
     
     template:
@@ -50,34 +50,53 @@ module.exports = (grunt) ->
           data:
             param: ''
         src: ['test/browser/template.html']
-        dest: '<%= clean.test_html %>/test1_no_arg.html'
+        dest: 'tmp/test/browser/test1_no_arg.html'
       five_args:
         options:
           data:
             param: "'isogr'"
         src: ['test/browser/template.html']
-        dest: '<%= clean.test_html %>/test2_five_args.html'
+        dest: 'tmp/test/browser/test2_five_args.html'
       six_args:
         options:
           data:
             param: "'isogra'"
         src: ['test/browser/template.html']
-        dest: '<%= clean.test_html %>/test3_six_args.html'
+        dest: 'tmp/test/browser/test3_six_args.html'
       seven_args:
         options:
           data:
             param: "'isogram'"
         src: ['test/browser/template.html']
-        dest: '<%= clean.test_html %>/test4_seven_args.html'
+        dest: 'tmp/test/browser/test4_seven_args.html'
+
+    es6transpiler:
+      main:
+        options:
+          globals:
+            define: false
+        files:
+          'lib/cli.js': ['lib/cli.js']
+          'lib/isogram.js': ['lib/isogram.js']
+      tests:
+        options:
+          globals:
+            describe: false
+            it: false
+        files: [
+          expand: true
+          src: ['test/**/*.js']
+          dest: 'tmp'
+        ]
 
     clean:
-      test_html: ['test/browser/pages']
+      tmp: ['lib', 'tmp']
       
     mochaTest:
       test:
         options:
           reporter: 'spec'
-        src: ['test/node/*.js']
+        src: ['tmp/test/node/*.js']
     
     mocha:
       options:
@@ -86,7 +105,7 @@ module.exports = (grunt) ->
         run: true
         reporter: 'Spec'
       browser:
-        src: ['<%= clean.test_html %>/*.html']
+        src: ['tmp/test/browser/*.html']
     
     watch:
       main:
@@ -94,22 +113,14 @@ module.exports = (grunt) ->
         tasks: ['build']
       test:
         files: ['test/**/*', '!**/.*', '!**/*arg*']
-        tasks: ['template', 'test', 'clean']
-    
+        tasks: ['template', 'test']
+
     release:
       options:
         bump: false
     
-    es6transpiler:
-      dist:
-        options:
-          globals:
-            define: true
-        files:
-          'lib/cli.js': ['lib/cli.js']
-          'lib/isogram.js': ['lib/isogram.js']
-    
   grunt.registerTask 'build', [
+    'clean'
     'jshint'
     'uglify'
     'template:main'
@@ -117,13 +128,13 @@ module.exports = (grunt) ->
   ]
   
   grunt.registerTask 'test', [
+    'clean'
     'jshint'
     'uglify'
     'template'
     'es6transpiler'
     'mochaTest'
     'mocha'
-    'clean'
   ]
   
   grunt.registerTask 'default', ['test', 'watch']

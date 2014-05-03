@@ -2,6 +2,7 @@
 .jshintrc
 .editorconfig
 src/
+tmp/
 test/
 Gruntfile.coffee
 demo.gif

@@ -5,12 +5,12 @@
   <title>Isogram Test</title>
   <meta name="description" content='Browser test for Isogram'>
   <base href="../../../">
-  <link rel="stylesheet" href="node_modules/grunt-mocha/node_modules/mocha/mocha.css" type="text/css" media="all">
+  <link rel="stylesheet" href="node_modules/mocha/mocha.css" type="text/css" media="all">
 
-  <script src="node_modules/grunt-mocha/node_modules/mocha/mocha.js"></script>
+  <script src="node_modules/mocha/mocha.js"></script>
   <script src="node_modules/chai/chai.js"></script>
   <script>
-    mocha.setup('tdd');
+    mocha.setup('bdd');
   </script>
 
   <script src="lib/isogram.js"></script>
@@ -19,7 +19,7 @@
     eval(isogram(<%= param %>));
   </script>
 
-  <script src="test/browser/spec.js"></script>
+  <script src="tmp/test/browser/spec.js"></script>
 </head>
 <body>
   <div id="mocha"></div>
