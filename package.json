@@ -7,8 +7,7 @@
     "isogram": "bin/isogram"
   },
   "scripts": {
-    "test": "grunt test",
-    "cli": "node bin/isogram; node bin/isogram error; node bin/isogram 12345;"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -52,9 +51,9 @@
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-es6-transpiler": "^0.1.0",
-    "grunt-mocha-test": "^0.10.1",
+    "grunt-mocha-test": "^0.10.2",
     "grunt-release": "^0.7.0",
     "grunt-template": "^0.2.3",
-    "jit-grunt": "^0.6.0"
+    "jit-grunt": "^0.7.0"
   }
 }
