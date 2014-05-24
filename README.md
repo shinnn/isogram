@@ -13,8 +13,7 @@ A [Node](http://nodejs.org/) module to generate Google Analytics code with any *
 
 ### Story
 
-Here is the default tracking code of Google's Universal Analytics.
-(cf. [Introduction to Analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/))
+Here is the default tracking code of [Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/).
 
 ```javascript
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -38,6 +37,18 @@ After seeing that, I modularized Bynens's way as this program, *isogram*.
 *isogram* is a code generator. It enables us to change the parameters of the Google Analytics tracking code, as we like, as long as they are [isogrammic](http://en.wikipedia.org/wiki/Isogram).
 
 Isn't it very useful? Indeed, it is so. But, I think, *isogram* can surprise the poeple seeing the source of your website, [such as Bynens's commit](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966#all_commit_comments "notes on commit").
+
+## Showcase
+
+[shinN]: <http://shinnn.github.io/>
+[tmdpw]: <http://tmdpw.eu/>
+
+|   Webite                      | URL                       | Tracking code parameters        |
+| ----------------------------- | ------------------------- | ------------------------------- |
+| Shinnosuke Watanabe's website | [shinnn.github.io][shinN] | `s` `h` `i` `n` `N`             |
+| Tim De Pauw's website         | [tmdpw.eu][tmdpw]         | `t` `m` `d` `p` `w` `e` `u`     |
+
+*[And you.](https://github.com/shinnn/isogram/pulls)*
 
 ## Installation
 
