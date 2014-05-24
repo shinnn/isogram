@@ -1,5 +1,10 @@
 {
+  "bitwise": true,
   "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true, 
+  "strict": true,
   "indent": 2,
   "evil": true,
   "quotmark": "single",
