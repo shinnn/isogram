@@ -1,0 +1,4 @@
+!function(G,o,O,g,l,e){G.GoogleAnalyticsObject=g,G[g]||(G[g]=function(){(G[g].q=G[g].q||[]).push(arguments)}),G[g].l=+new Date,l=o.createElement(O),e=o.getElementsByTagName(O)[0],l.src="//www.google-analytics.com/analytics.js",e.parentNode.insertBefore(l,e)}(this,document,"script","ga");
+
+ga("create", "UA-XXXXX-X");
+ga("send", "pageview");

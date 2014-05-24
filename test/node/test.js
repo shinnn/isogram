@@ -1,15 +1,22 @@
+/* jshint curly: false */
+
 'use strict';
 
+var fs = require('fs');
 var assert = require('chai').assert;
 var isogram = require(process.cwd() + '/lib/isogram.js');
 
-describe('isogram', () => {
+describe('isogram() on Node', () => {
   it('should be a function.', () => {
     assert.isFunction(isogram);
   });
 
-  it('should return a string by default.', () => {
-    assert.isString(isogram());
+  it('should return a Google Analytics string.', done => {
+    fs.readFile('test/node/fixture.txt', (err, result) => {
+      if (err) done(err);
+      assert(isogram(), result);
+      done();
+    });
   });
 
   it('should not accept four characters.', () => {
