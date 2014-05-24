@@ -22,9 +22,7 @@ module.exports = (grunt) ->
     jshint:
       options:
         jshintrc: '.jshintrc'
-      main: ['src/*.js']
-      test_node: ['test/node/*.js']
-      test_browser: ['test/browser/*.js']
+      all: ['src/*.js', 'test/**/*.js']
       
     uglify:
       options:
@@ -37,7 +35,7 @@ module.exports = (grunt) ->
           src: ['*.js']
           dest: 'tmp/snippets-min'
         ]
-    
+        
     template:
       main:
         options:
@@ -45,30 +43,6 @@ module.exports = (grunt) ->
         files:
           'lib/isogram.js': ['src/isogram-es6.js']
           'lib/cli.js': ['src/cli-es6.js']
-      no_arg:
-        options:
-          data:
-            param: ''
-        src: ['test/browser/template.html']
-        dest: 'tmp/test/browser/test1_no_arg.html'
-      five_args:
-        options:
-          data:
-            param: "'isogr'"
-        src: ['test/browser/template.html']
-        dest: 'tmp/test/browser/test2_five_args.html'
-      six_args:
-        options:
-          data:
-            param: "'isogra'"
-        src: ['test/browser/template.html']
-        dest: 'tmp/test/browser/test3_six_args.html'
-      seven_args:
-        options:
-          data:
-            param: "'isogram'"
-        src: ['test/browser/template.html']
-        dest: 'tmp/test/browser/test4_seven_args.html'
 
     es6transpiler:
       main:
@@ -96,23 +70,20 @@ module.exports = (grunt) ->
       test:
         options:
           reporter: 'spec'
-        src: ['tmp/test/node/*.js']
-    
-    mocha:
+        src: ['tmp/test/{node,cli}/*.js']
+
+    casper:
       options:
-        mocha:
-          ignoreLeaks: false
-        run: true
-        reporter: 'Spec'
-      browser:
-        src: ['tmp/test/browser/*.html']
+        test: true
+      test:
+        src: ['tmp/test/browser/test.js']
     
     watch:
       main:
         files: ['src/*.js', 'bin/*.js']
         tasks: ['build']
       test:
-        files: ['test/**/*', '!**/.*', '!**/*arg*']
+        files: ['test/**/*', '!**/.*']
         tasks: ['template', 'test']
 
     release:
@@ -134,7 +105,7 @@ module.exports = (grunt) ->
     'template'
     'es6transpiler'
     'mochaTest'
-    'mocha'
+    'casper'
   ]
   
   grunt.registerTask 'default', ['test', 'watch']

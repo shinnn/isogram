@@ -3,6 +3,8 @@ node_js:
   - "0.10"
   - "0.11"
 before_script:
+  - brew update
+  - brew install casperjs --devel
   - npm install -g grunt-cli
 notifications:
   email: false
