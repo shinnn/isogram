@@ -15,11 +15,11 @@
   
   const toStr = Object.prototype.toString;
   
-  function isObject (variable) {
+  function isObject(variable) {
     return toStr.call(variable) === '[object Object]';
   }
   
-  function arrayToSentence (arr) {
+  function arrayToSentence(arr) {
     let result = '';
     arr.forEach((elm, index) => {
       if (index > 0) {
@@ -35,12 +35,12 @@
     return result;
   }
   
-  function colorize (str) {
+  function colorize(str) {
     // green
     return '\x1b[32m' + str + '\x1b[39m';
   }
   
-  function Isogram (characters = 'GoOgle', options = {}) {
+  function isogram(characters = 'GoOgle', options = {}) {
     if (isObject(characters)) {
       options = characters;
       characters = 'GoOgle';
@@ -92,7 +92,7 @@
     
     params.forEach((elm, index) => {
       gaLoader = gaLoader.replace(
-        new RegExp('_v' + index + '_', 'g'),
+        new RegExp(`_v${ index }_`, 'g'),
         options.color? colorize(elm): elm
       );
     });
@@ -120,29 +120,24 @@
     return gaLoader + additional;
   }
   
-  Isogram.version = '<%= version %>';
+  isogram.version = '<%= version %>';
   
   var root = typeof window === 'object'? window: this;
 
   // some AMD build optimizers like r.js check for condition patterns like the following:
-  if (typeof define == 'function' &&
-      typeof define.amd == 'object' &&
+  if (typeof define === 'function' &&
+      typeof define.amd === 'object' &&
       define.amd) {
-    root.isogram = Isogram;
+    define(isogram);
+  
+  // check for `exports` after `define`
+  // in case a build optimizer adds an `exports` object
+  } else if (typeof module !== 'undefined' && module.exports) {
+    (module.exports = isogram).isogram = isogram;
 
-    // define as an anonymous module so, through path mapping, it can be
-    // referenced as the "isogram" module
-    define([], function() {
-      return Isogram;
-    });
-  }
-  // check for `exports` after `define` in case a build optimizer adds an `exports` object
-  else if (typeof module !== 'undefined' && module.exports) {
-    (module.exports = Isogram).isogram = Isogram;
-  }
-  else {
-    // in a browser or Rhino
-    root.isogram = Isogram;
+  // in a browser or Rhino
+  } else {
+    root.isogram = isogram;
   }
 
 }());
