@@ -4,7 +4,7 @@
 
 var exec = require('child_process').exec;
 var assert = require('chai').assert;
-var chalk = require('chalk'); 
+var chalk = require('chalk');
 
 const isogram = 'node bin/isogram ';
 
@@ -19,7 +19,7 @@ describe('"isogram" command', done => {
       done();
     });
   });
-  
+
   it('should accept "-i" flag.', done => {
     exec(isogram + '-i UA-01234-5', (err, stdout) => {
       if (err) done(err);
@@ -27,7 +27,7 @@ describe('"isogram" command', done => {
       done();
     });
   });
-  
+
   it('should accept "--id" flag.', done => {
     exec(isogram + '--id 67890-1', (err, stdout) => {
       if (err) done(err);
@@ -35,7 +35,7 @@ describe('"isogram" command', done => {
       done();
     });
   });
-  
+
   it('should accept "-d" flag.', done => {
     exec(isogram + '-d foo.org', (err, stdout) => {
       if (err) done(err);
@@ -43,7 +43,7 @@ describe('"isogram" command', done => {
       done();
     });
   });
-  
+
   it('should accept "--domain-name" flag.', done => {
     exec(isogram + '--domain-name "bar.com"', (err, stdout) => {
       if (err) done(err);
@@ -51,7 +51,7 @@ describe('"isogram" command', done => {
       done();
     });
   });
-  
+
   it('should accept "-m" flag.', done => {
     exec(isogram + '-m', (err, stdout) => {
       if (err) done(err);
