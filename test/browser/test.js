@@ -10,7 +10,7 @@ function loadAnalytics(args) {
   }
 }
 
-var testArgs = [
+var params = [
   undefined,
   'isogr',
   'isogra',
@@ -26,13 +26,13 @@ casper.start('test/browser/index.html', function() {
     );
     test.done();
   });
-  
-}).each(testArgs, function(itself, arg) {
+
+}).each(params, function(itself, param) {
   casper.test.begin(`The script generated using isogram() with ${
-    arg? arg.length: 'no'
-  } arguments.`, 2, test => {
+    param? param.length: 'no'
+  } arguments`, 2, test => {
     this.reload(() => {
-      casper.evaluate(loadAnalytics);
+      casper.evaluate(loadAnalytics, param);
       test.assertEvalEquals(
         () => typeof window.ga,
         'function',
