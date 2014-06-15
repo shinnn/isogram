@@ -2,9 +2,12 @@
 
 'use strict';
 
-var fs = require('fs');
 var assert = require('chai').assert;
-var isogram = require(process.cwd() + '/lib/isogram.js');
+var fs = require('fs');
+var path = require('path');
+
+var pkg = require(path.join(process.cwd(), 'package.json'));
+var isogram = require(path.join(process.cwd(), pkg.main));
 
 describe('isogram() on Node', () => {
   it('should be a function.', () => {
