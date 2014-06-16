@@ -44,11 +44,11 @@ Isn't it very useful? Indeed, it is so. But, I think, *isogram* can surprise the
 [shinN]: <http://shinnn.github.io/>
 [tmdpw]: <http://tmdpw.eu/>
 
-|   Webite                      | URL                       | Tracking code parameters        |
-| ----------------------------- | ------------------------- | ------------------------------- |
-| Dogescript                    | [dogescript.com][shinN]   | `W` `o` `w` `s` `u` `c` `h`     |
-| Shinnosuke Watanabe's website | [shinnn.github.io][shinN] | `s` `h` `i` `n` `N`             |
-| Tim De Pauw's website         | [tmdpw.eu][tmdpw]         | `t` `m` `d` `p` `w` `e` `u`     |
+| Webite (A - Z)                | URL                       | Tracking code parameters    |
+| ----------------------------- | ------------------------- | --------------------------- |
+| Dogescript                    | [dogescript.com][doge]    | `W` `o` `w` `s` `u` `c` `h` |
+| Shinnosuke Watanabe's website | [shinnn.github.io][shinN] | `s` `h` `i` `n` `N`         |
+| Tim De Pauw's website         | [tmdpw.eu][tmdpw]         | `t` `m` `d` `p` `w` `e` `u` |
 
 *[And you.](https://github.com/shinnn/isogram/pulls)*
 
