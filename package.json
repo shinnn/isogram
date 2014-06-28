@@ -55,6 +55,7 @@
     "grunt-mocha-test": "^0.11.0",
     "grunt-release": "^0.7.0",
     "grunt-template": "^0.2.3",
-    "jit-grunt": "^0.7.0"
+    "jit-grunt": "^0.7.0",
+    "require-main": "0.1.0"
   }
 }
