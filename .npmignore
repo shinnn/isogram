@@ -1,6 +1,8 @@
+.editorconfig
 .travis.yml
 .jshintrc
-.editorconfig
+bower.json
+component.json
 src/
 tmp/
 test/

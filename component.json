@@ -1,0 +1,21 @@
+{
+  "name": "isogram",
+  "version": "0.4.3",
+  "description": "Generates Google Analytics snippet with any 'isogrammic' parameters you like",
+  "keywords": [
+    "snippet",
+    "source",
+    "code",
+    "analytics",
+    "parameter",
+    "word",
+    "isogram",
+    "nonpattern"
+  ],
+  "repo": "shinnn/isogram",
+  "main": "lib/isogram.js",
+  "scripts": [
+    "lib/isogram.js"
+  ],
+  "license": "MIT"
+}
