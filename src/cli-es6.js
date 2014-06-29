@@ -22,7 +22,7 @@ try {
     color: program.color
   });
   console.log(output);
-  
+
 } catch (e) {
   console.error(chalk.red(e));
 }

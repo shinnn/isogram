@@ -4,7 +4,7 @@ module.exports = (grunt) ->
   require('jit-grunt') grunt, {
     es6transpiler: 'grunt-es6-transpiler'
   }
-  
+
   templateData = ->
     data =
       version: grunt.file.readJSON('package.json').version
@@ -13,17 +13,20 @@ module.exports = (grunt) ->
     for paramNum in [5,6,7]
       _snippet = grunt.file.read "tmp/snippets-min/#{ paramNum }params.js"
       data["snippet_#{ paramNum }params"] = _snippet
-    
+
     data
-  
+
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
+
+    jsonlint:
+      all: ['*.json']
 
     jshint:
       options:
         jshintrc: '.jshintrc'
       all: ['src/*.js', 'test/**/*.js']
-      
+
     uglify:
       options:
         mangle: false
@@ -35,7 +38,7 @@ module.exports = (grunt) ->
           src: ['*.js']
           dest: 'tmp/snippets-min'
         ]
-        
+
     template:
       main:
         options:
@@ -65,7 +68,7 @@ module.exports = (grunt) ->
 
     clean:
       tmp: ['lib', 'tmp']
-      
+
     mochaTest:
       test:
         options:
@@ -77,7 +80,7 @@ module.exports = (grunt) ->
         test: true
       test:
         src: ['tmp/test/browser/test.js']
-    
+
     watch:
       main:
         files: ['src/*.js', 'bin/*.js']
@@ -89,26 +92,18 @@ module.exports = (grunt) ->
     release:
       options:
         bump: false
-    
+
   grunt.registerTask 'build', [
     'clean'
-    'jshint'
-    'uglify'
-    'template:main'
-    'es6transpiler'
-  ]
-  
-  grunt.registerTask 'test', [
-    'clean'
+    'jsonlint'
     'jshint'
     'uglify'
     'template'
     'es6transpiler'
-    'mochaTest'
-    'casper'
   ]
-  
+
+  grunt.registerTask 'test', ['build', 'mochaTest', 'casper']
+
   grunt.registerTask 'default', ['test', 'watch']
-  
+
   grunt.registerTask 'publish', ['test', 'release:patch']
-  
