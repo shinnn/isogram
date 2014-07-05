@@ -48,6 +48,8 @@ module.exports = (grunt) ->
           'lib/cli.js': ['src/cli-es6.js']
 
     es6transpiler:
+      options:
+        environments: ['node', 'browser', 'mocha']
       main:
         options:
           globals:
@@ -56,10 +58,6 @@ module.exports = (grunt) ->
           'lib/cli.js': ['lib/cli.js']
           'lib/isogram.js': ['lib/isogram.js']
       tests:
-        options:
-          globals:
-            describe: false
-            it: false
         files: [
           expand: true
           src: ['test/**/*.js']
