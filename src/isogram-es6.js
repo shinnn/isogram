@@ -13,12 +13,6 @@
     '<%= snippet_7params %>'
   ];
 
-  const toStr = Object.prototype.toString;
-
-  function isObject(variable) {
-    return toStr.call(variable) === '[object Object]';
-  }
-
   function arrayToSentence(arr) {
     let result = '';
     arr.forEach((elm, index) => {
@@ -41,7 +35,7 @@
   }
 
   function isogram(characters = 'GoOgle', options = {}) {
-    if (isObject(characters)) {
+    if (typeof characters !== 'string') {
       options = characters;
       characters = 'GoOgle';
     }
