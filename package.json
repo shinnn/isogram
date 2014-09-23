@@ -47,20 +47,19 @@
     "commander": "^2.2.0"
   },
   "devDependencies": {
-    "casperjs": "^1.1.0-beta3",
     "chai": "^1.9.1",
     "grunt": "^0.4.5",
-    "grunt-casper": "^0.3.9",
-    "grunt-contrib-clean": "~0.5.0",
+    "grunt-casper": "^0.4.1",
+    "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-es6-transpiler": "^0.1.0",
+    "grunt-es6-transpiler": "^1.0.1",
     "grunt-jsonlint": "^1.0.4",
-    "grunt-mocha-test": "^0.11.0",
+    "grunt-mocha-test": "^0.12.0",
     "grunt-release": "^0.7.0",
     "grunt-template": "^0.2.3",
-    "jit-grunt": "^0.7.0",
-    "require-main": "0.1.0"
+    "jit-grunt": "^0.8.0",
+    "require-main": "0.1.1"
   }
 }
