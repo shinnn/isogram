@@ -21,7 +21,7 @@ Here is the default tracking code of [Google Analytics](https://developers.googl
 
 It has the immediate invoked function with seven parameters `i` `s` `o` `g` `r` `a` `m`.
 
-On the other hand, here is the tracking code used in the [`index.html`](https://github.com/h5bp/html5-boilerplate/blob/master/index.html) of [HTML5 Boilerplate](http://html5boilerplate.com/).
+On the other hand, [the `index.html`](https://github.com/h5bp/html5-boilerplate/blob/master/src/index.html) of [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) includes the following tracking code:
 
 ```javascript
 (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
@@ -58,25 +58,17 @@ Isn't it very useful? Indeed, it is so. But, I think, *isogram* can surprise the
 
 Install with [npm](https://www.npmjs.org/). (Make sure you have installed [Node](http://nodejs.org/download/).)
 
-### CLI executable
-
 ```
 npm install -g isogram
 ```
 
-### Programmatic use on Node
-
-Coming soon.
-
-## Usage
-
-### Use on command line
+## CLI
 
 ```
 isogram [parameters] [options]
 ```
 
-#### Parameters
+### Parameters
 
 Default: `GoOgle`
 
@@ -84,7 +76,7 @@ Default: `GoOgle`
 
 For example, `yummy` is not valid, but `YuMmy` is valid.
 
-#### Options
+### Options
 
 ```
 -h, --help                   output usage information
@@ -95,15 +87,15 @@ For example, `yummy` is not valid, but `YuMmy` is valid.
 --no-color                   output in a single color
 ```
 
-#### Example
+### Example
 
-###### command
+##### command
 
 ```
 isogram Company --id 12345678-9 --domain-name your-company.com
 ```
 
-###### output
+##### output
 
 ```javascript
 !function(C,o,m,p,a,n,y){C.GoogleAnalyticsObject=a,C[a]=C[a]||function(){(C[a].q=C[a].q||[]).push(arguments)},C[a].l=+new Date,n=o.createElement(m),y=o.getElementsByTagName(m)[0],n.src=p,y.parentNode.insertBefore(n,y)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");
@@ -116,6 +108,6 @@ ga("send", "pageview");
 
 Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
 
-Unless otherwise stated, all source code in this repository is licensed under [the MIT license](./LICENSE).
+Unless otherwise stated, all source code in this repository is licensed under [the MIT License](./LICENSE).
 
 [![endorse](https://api.coderwall.com/shinnn/endorsecount.png)](https://coderwall.com/shinnn)
