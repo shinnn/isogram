@@ -40,6 +40,7 @@ Isn't it very useful? Indeed, it is so. But, I think, *isogram* can surprise the
 
 ## Showcase
 
+[bsync]: <http://www.browsersync.io/>
 [doge]: <http://dogescript.com/>
 [gulp]: <http://gulpjs.com/>
 [shinN]: <http://shinnn.github.io/>
@@ -47,6 +48,7 @@ Isn't it very useful? Indeed, it is so. But, I think, *isogram* can surprise the
 
 | Webite (A - Z)                | URL                       | Tracking code parameters    |
 | ----------------------------- | ------------------------- | --------------------------- |
+| BrowserSync                   | [browsersync.io][bsync]   | `s` `y` `n` `c` `I` `t`     |
 | Dogescript                    | [dogescript.com][doge]    | `W` `o` `w` `s` `u` `c` `h` |
 | gulp.js                       | [gulpjs.com][gulp]        | `g` `u` `l` `p` `j` `s`     |
 | Shinnosuke Watanabe's website | [shinnn.github.io][shinN] | `s` `h` `i` `n` `N`         |
