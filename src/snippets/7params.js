@@ -9,4 +9,4 @@
     _v6_ = _v1_.getElementsByTagName(_v2_)[0];
     _v5_.src = _v3_;
     _v6_.parentNode.insertBefore(_v5_, _v6_)
-})(this, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
