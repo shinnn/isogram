@@ -14,6 +14,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/shinnn/isogram.git"
+    "test-only": "tape test-*.js",
   },
   "repository": "shinnn/isogram",
   "author": {
