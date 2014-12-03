@@ -9,11 +9,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "grunt test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shinnn/isogram.git"
+    "test": "gulp test",
     "test-only": "tape test-*.js",
   },
   "repository": "shinnn/isogram",
