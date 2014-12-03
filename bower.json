@@ -1,22 +1,25 @@
 {
   "name": "isogram",
-  "version": "0.4.3",
-  "description": "Generates Google Analytics snippet with any 'isogrammic' parameters you like",
+  "description": "Generate Google Analytics snippet with any 'isogrammic' parameters you like",
   "keywords": [
     "snippet",
     "source",
+    "script",
     "code",
     "analytics",
+    "google analytics",
+    "universal analytics",
     "parameter",
+    "parameters",
     "word",
+    "word play",
     "isogram",
     "nonpattern"
   ],
-  "main": "lib/isogram.js",
+  "main": "dist/isogram-browser.js",
   "authors": [
     {
       "name": "Shinnosuke Watanabe",
-      "email": "snnskwtnb@gmail.com",
       "homepage": "https://github.com/shinnn"
     }
   ],
@@ -26,17 +29,23 @@
     "url": "git://github.com/shinnn/isogram.git"
   },
   "license": "MIT",
+  "dependencies": {
+    "array-to-sentence": "~1.0.1",
+    "ga-loader-snippets": "~1.0.1",
+    "is-var-name": "~1.0.0",
+    "assert-unique": "~1.0.0",
+    "ga-tracker-snippet": "~1.0.0"
+  },
   "ignore": [
     "**/.*",
+    "*.gif",
+    "*.js",
+    "*.yml",
+    "bower_components",
+    "components",
     "node_modules",
-    "bin",
-    "demo.gif",
-    "Gruntfile.coffee",
-    "lib/cli.js",
-    "src",
-    "tmp",
-    "test",
-    "package.json",
-    "component.json"
+    "dist/isogram-standalone.js",
+    "component.json",
+    "package.json"
   ]
 }

@@ -3,13 +3,14 @@
   "camelcase": true,
   "curly": true,
   "eqeqeq": true,
-  "immed": true, 
-  "strict": true,
-  "indent": 2,
-  "evil": true,
+  "esnext": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
   "quotmark": "single",
+  "regexp": true,
+  "strict": true,
+  "undef": true,
   "browser": true,
-  "node": true,
-  "mocha": true,
-  "esnext": true
+  "node": true
 }

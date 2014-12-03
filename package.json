@@ -1,11 +1,13 @@
 {
   "name": "isogram",
   "version": "0.4.3",
-  "description": "Generates Google Analytics snippet with any 'isogrammic' parameters you like",
-  "main": "lib/isogram.js",
-  "bin": {
-    "isogram": "bin/isogram"
-  },
+  "description": "Generate Google Analytics snippet with any 'isogrammic' parameters you like",
+  "bin": "cli.js",
+  "files": [
+    "cli.js",
+    "index.js",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "grunt test"
   },
@@ -13,6 +15,7 @@
     "type": "git",
     "url": "https://github.com/shinnn/isogram.git"
   },
+  "repository": "shinnn/isogram",
   "author": {
     "name": "Shinnosuke Watanabe",
     "url": "https://github.com/shinnn"
@@ -23,43 +26,60 @@
       "url": "https://github.com/shinnn/isogram/blob/master/LICENSE"
     }
   ],
-  "bugs": {
-    "url": "https://github.com/shinnn/isogram/issues"
-  },
-  "homepage": "https://github.com/shinnn/isogram",
-  "readmeFilename": "README.md",
   "keywords": [
-    "cli",
     "snippet",
     "source",
+    "script",
     "code",
     "analytics",
     "google analytics",
     "universal analytics",
     "parameter",
+    "parameters",
     "word",
     "word play",
     "isogram",
-    "nonpattern"
+    "nonpattern",
+    "browser",
+    "client-side",
+    "cli",
+    "command-line"
   ],
   "dependencies": {
-    "chalk": "^0.5.0",
-    "commander": "^2.2.0"
+    "array-to-sentence": "^1.0.1",
+    "assert-unique": "^1.0.0",
+    "chalk": "^0.5.1",
+    "ga-loader-snippets": "^1.0.1",
+    "ga-tracker-snippet": "^1.0.0",
+    "is-var-name": "^1.0.0",
+    "minimist": "^1.1.0",
+    "sum-up": "^1.0.0"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
-    "grunt": "^0.4.5",
-    "grunt-casper": "^0.4.1",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-es6-transpiler": "^1.0.1",
-    "grunt-jsonlint": "^1.0.4",
-    "grunt-mocha-test": "^0.12.0",
-    "grunt-release": "^0.7.0",
-    "grunt-template": "^0.2.3",
-    "jit-grunt": "^0.8.0",
-    "require-main": "0.1.1"
+    "bower": "^1.3.12",
+    "browserify": "^6.3.3",
+    "each-exec": "^1.0.0",
+    "gulp": "^3.8.10",
+    "gulp-jscs": "^1.3.1",
+    "gulp-jshint": "^1.9.0",
+    "gulp-jsonlint": "^1.0.1",
+    "gulp-load-plugins": "^0.7.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.0",
+    "istanbul": "^0.3.3",
+    "istanbul-coveralls": "^1.0.1",
+    "jshint-stylish": "^1.0.0",
+    "merge-stream": "^0.1.6",
+    "require-bower-files": "^1.0.0",
+    "rimraf": "^2.2.8",
+    "script-equal": "^1.0.1",
+    "tap-spec": "^2.1.1",
+    "tape": "^3.0.3",
+    "to-camel-case": "^0.2.1",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98
   }
 }
