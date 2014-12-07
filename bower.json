@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "array-to-sentence": "~1.0.1",
-    "ga-loader-snippets": "~1.0.1",
+    "ga-loader-snippets": "~1.1.0",
     "is-var-name": "~1.0.0",
     "assert-unique": "~1.0.0",
     "ga-tracker-snippet": "~1.0.0"
