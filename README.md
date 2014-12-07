@@ -5,6 +5,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/oys8520d3746dnky?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/isogram)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg?style=flat)](https://coveralls.io/r/shinnn/isogram)
 [![Dependency Status](https://img.shields.io/david/shinnn/isogram.svg?style=flat)](https://david-dm.org/shinnn/isogram)
+[![NPM Downloads](https://img.shields.io/npm/dm/isogram.svg?style=flat)](https://www.npmjs.org/package/isogram#download-chart)
 
 Generate Google Analytics code with any *isogrammic* parameters you like
 
@@ -39,7 +40,9 @@ After seeing that, I modularized Bynens's way as this program, *isogram*.
 
 Isn't it very useful? Indeed, it isn't. But, I think, *isogram* can surprise the poeple seeing the source code of your website, [such as Bynens's commit](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966#all_commit_comments "notes on commit").
 
-## Showcase
+## Sites using *isogram*
+
+These are real examples using the code *isogram* generates.
 
 [bsync]: <http://www.browsersync.io/>
 [css]: <https://cssnext.github.io/>
@@ -61,7 +64,7 @@ Isn't it very useful? Indeed, it isn't. But, I think, *isogram* can surprise the
 | Shinnosuke Watanabe's website | [shinnn.github.io][shinN] | `s` `h` `i` `n` `N`         |
 | Tim De Pauw's website         | [tmdpw.eu][tmdpw]         | `t` `m` `d` `p` `w` `e` `u` |
 
-*[And you.](https://github.com/shinnn/isogram/pulls)*
+*[Feel free to create a pull request to add your site here.](https://github.com/shinnn/isogram/pulls)*
 
 ## CLI
 
@@ -104,18 +107,18 @@ For example, `yummy` is not valid, but `YuMmy` is valid.
 #### Example
 
 ```sh
-isogram Company --id 12345678-9 --domain-name your-company.com
+isogram YoyOjs --id 12345678-9 --domain awesome-website.com
 ```
 
 yields:
 
 ```javascript
-!function(C,o,m,p,a,n,y){C.GoogleAnalyticsObject=m,C[m]||(C[m]=function(){
-(C[m].q=C[m].q||[]).push(arguments)}),C[m].l=+new Date,n=o.createElement(p),
-y=o.getElementsByTagName(p)[0],n.src=a,y.parentNode.insertBefore(n,y)}
-(window,document,'ga','script','//www.google-analytics.com/analytics.js');
+!function(Y,o,y,O,j,s){Y.GoogleAnalyticsObject=y;Y[y]||(Y[y]=function(){
+(Y[y].q=Y[y].q||[]).push(arguments)});Y[y].l=+new Date;j=o.createElement(O);
+s=o.getElementsByTagName(O)[0];j.src='//www.google-analytics.com/analytics.js';
+s.parentNode.insertBefore(j,s)}(window,document,'ga','script');
 
-ga('create', 'UA-12345678-9', 'your-company.com');
+ga('create', 'UA-12345678-9', 'awesome-website.com');
 ga('send', 'pageview');
 ```
 
