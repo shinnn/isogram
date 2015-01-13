@@ -4,8 +4,8 @@
 [![Build Status](https://img.shields.io/travis/shinnn/isogram.svg?style=flat)](https://travis-ci.org/shinnn/isogram)
 [![Build status](https://ci.appveyor.com/api/projects/status/oys8520d3746dnky?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/isogram)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg?style=flat)](https://coveralls.io/r/shinnn/isogram)
-[![Dependency Status](https://img.shields.io/david/shinnn/isogram.svg?style=flat)](https://david-dm.org/shinnn/isogram)
-[![NPM Downloads](https://img.shields.io/npm/dm/isogram.svg?style=flat)](https://www.npmjs.org/package/isogram#download-chart)
+[![Dependency Status](https://img.shields.io/david/shinnn/isogram.svg?style=flat&label=deps)](https://david-dm.org/shinnn/isogram)
+[![devDependency Status](https://img.shields.io/david/dev/shinnn/isogram.svg?style=flat&label=devDeps)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
 Generate Google Analytics code with any *isogrammic* parameters you like
 
@@ -44,6 +44,7 @@ Isn't it very useful? Indeed, it isn't. But, I think, *isogram* can surprise the
 
 These are real examples using the code *isogram* generates.
 
+[apidoc]: <http://apidocjs.com/>
 [bsync]: <http://www.browsersync.io/>
 [css]: <https://cssnext.github.io/>
 [doge]: <http://dogescript.com/>
@@ -55,6 +56,7 @@ These are real examples using the code *isogram* generates.
 
 | Webite (A - Z)                | URL                       | Tracking code parameters    |
 | ----------------------------- | ------------------------- | --------------------------- |
+| apiDoc                        | [apidocjs.com][apidoc]    | `a` `p` `i` `d` `o` `c`     |
 | BrowserSync                   | [browsersync.io][bsync]   | `s` `y` `n` `c` `I` `t`     |
 | cssnext                       | [cssnext.github.io][css]  | `c` `s` `S` `n` `e` `x` `t` |
 | Dogescript                    | [dogescript.com][doge]    | `W` `o` `w` `s` `u` `c` `h` |
