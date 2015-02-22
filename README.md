@@ -53,6 +53,7 @@ These are real examples using the code *isogram* generates.
 [jekyll]: <http://jekyllrb.com/>
 [shinN]: <https://shinnn.github.io/>
 [tmdpw]: <http://tmdpw.eu/>
+[starico]: <https://stari.co/>
 
 | Webite (A - Z)                | URL                       | Tracking code parameters    |
 | ----------------------------- | ------------------------- | --------------------------- |
@@ -65,6 +66,7 @@ These are real examples using the code *isogram* generates.
 | Jekyll                        | [jekyllrb.com][jekyll]    | `j` `e` `k` `y` `l` `L`     |
 | Shinnosuke Watanabe's website | [shinnn.github.io][shinN] | `s` `h` `i` `n` `N`         |
 | Tim De Pauw's website         | [tmdpw.eu][tmdpw]         | `t` `m` `d` `p` `w` `e` `u` |
+| starico                       | [stari.co][starico]       | `s` `t` `a` `r` `i` `c` `o` |
 
 *[Feel free to create a pull request to add your site here.](https://github.com/shinnn/isogram/pulls)*
 
