@@ -46,12 +46,12 @@ These are real examples using the code *isogram* generates.
 
 [apidoc]: <http://apidocjs.com/>
 [bsync]: <http://www.browsersync.io/>
-[builtbylane]: <http://builtbylane.com/>
 [css]: <https://cssnext.github.io/>
 [doge]: <http://dogescript.com/>
 [gulp]: <http://gulpjs.com/>
 [hapi]: <http://hapijs.com/>
 [jekyll]: <http://jekyllrb.com/>
+[kanyewest]: <http://kanyewest.com/>
 [shinN]: <https://shinnn.github.io/>
 [starico]: <https://stari.co/>
 [tmdpw]: <http://tmdpw.eu/>
@@ -65,7 +65,7 @@ These are real examples using the code *isogram* generates.
 | gulp.js                       | [gulpjs.com][gulp]           | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]           | `h` `a` `p` `i` `j` `s`     |
 | Jekyll                        | [jekyllrb.com][jekyll]       | `j` `e` `k` `y` `l` `L`     |
-| kanyewest.com                 | [kanyewest.com][builtbylane] | `k` `a` `n` `y` `e`         |
+| kanyewest.com                 | [kanyewest.com][kanyewest]   | `k` `a` `n` `y` `e`         |
 | Shinnosuke Watanabe's website | [shinnn.github.io][shinN]    | `s` `h` `i` `n` `N`         |
 | starico                       | [stari.co][starico]          | `s` `t` `a` `r` `i` `c` `o` |
 | Tim De Pauw's website         | [tmdpw.eu][tmdpw]            | `t` `m` `d` `p` `w` `e` `u` |
