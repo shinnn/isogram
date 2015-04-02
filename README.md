@@ -46,6 +46,7 @@ These are real examples using the code *isogram* generates.
 
 [apidoc]: <http://apidocjs.com/>
 [bsync]: <http://www.browsersync.io/>
+[builtbylane]: <http://builtbylane.com/>
 [css]: <https://cssnext.github.io/>
 [doge]: <http://dogescript.com/>
 [gulp]: <http://gulpjs.com/>
