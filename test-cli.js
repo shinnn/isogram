@@ -126,7 +126,7 @@ test('"isogram" command', function(t) {
     );
     t.equal(
       stderr,
-      'Number of characters must be 3 and more or 7 and less.\n',
+      'Number of characters must be no less than 3 and no greater than 7.\n',
       'should print error message when it takes less than 3 characters.'
     );
   });
@@ -139,7 +139,7 @@ test('"isogram" command', function(t) {
     );
     t.equal(
       stderr,
-      'Number of characters must be 3 and more or 7 and less.\n',
+      'Number of characters must be no less than 3 and no greater than 7.\n',
       'should print error message when it takes more than 7 characters.'
     );
   });

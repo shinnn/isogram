@@ -64,6 +64,7 @@ These are real examples using the code *isogram* generates.
 | gulp.js                       | [gulpjs.com][gulp]        | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]        | `h` `a` `p` `i` `j` `s`     |
 | Jekyll                        | [jekyllrb.com][jekyll]    | `j` `e` `k` `y` `l` `L`     |
+| Jekyll                        | [kanyewest.com][builtbylane]    | `k` `a` `n` `y` `e`     |
 | Shinnosuke Watanabe's website | [shinnn.github.io][shinN] | `s` `h` `i` `n` `N`         |
 | starico                       | [stari.co][starico]       | `s` `t` `a` `r` `i` `c` `o` |
 | Tim De Pauw's website         | [tmdpw.eu][tmdpw]         | `t` `m` `d` `p` `w` `e` `u` |
