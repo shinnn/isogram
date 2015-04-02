@@ -55,8 +55,8 @@ These are real examples using the code *isogram* generates.
 [starico]: <https://stari.co/>
 [tmdpw]: <http://tmdpw.eu/>
 
-| Webite (A - Z)                | URL                       | Tracking code parameters    |
-| ----------------------------- | ------------------------- | --------------------------- |
+| Webite (A - Z)                | URL                          | Tracking code parameters    |
+| ----------------------------- | ---------------------------- | --------------------------- |
 | apiDoc                        | [apidocjs.com][apidoc]       | `a` `p` `i` `d` `o` `c`     |
 | BrowserSync                   | [browsersync.io][bsync]      | `s` `y` `n` `c` `I` `t`     |
 | cssnext                       | [cssnext.github.io][css]     | `c` `s` `S` `n` `e` `x` `t` |
@@ -64,7 +64,7 @@ These are real examples using the code *isogram* generates.
 | gulp.js                       | [gulpjs.com][gulp]           | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]           | `h` `a` `p` `i` `j` `s`     |
 | Jekyll                        | [jekyllrb.com][jekyll]       | `j` `e` `k` `y` `l` `L`     |
-| kanyewest.com                 | [kanyewest.com][builtbylane] | `k` `a` `n` `y` `e`     |
+| kanyewest.com                 | [kanyewest.com][builtbylane] | `k` `a` `n` `y` `e`         |
 | Shinnosuke Watanabe's website | [shinnn.github.io][shinN]    | `s` `h` `i` `n` `N`         |
 | starico                       | [stari.co][starico]          | `s` `t` `a` `r` `i` `c` `o` |
 | Tim De Pauw's website         | [tmdpw.eu][tmdpw]            | `t` `m` `d` `p` `w` `e` `u` |
