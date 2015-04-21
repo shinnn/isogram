@@ -120,13 +120,13 @@ function runTest(description, isogram) {
 
     t.throws(
       isogram.bind(null, 'ab', null),
-      /must be 3 and more or 7 and less\./,
+      /Number of characters must be no fewer than 3 and no greater than 7\./,
       'should not accept less than 3 characters.'
     );
 
     t.throws(
       isogram.bind(null, 'abcdefgh', undefined),
-      /must be 3 and more or 7 and less\./,
+      /Number of characters must be no fewer than 3 and no greater than 7\./,
       'should not accept more than 7 characters.'
     );
 

@@ -51,7 +51,7 @@ module.exports = function isogram(characters, options) {
   }
 
   if (len < 3 || 7 < len) {
-    throw new RangeError('Number of characters must be 3 and more or 7 and less.');
+    throw new RangeError('Number of characters must be no fewer than 3 and no greater than 7.');
   }
 
   assertUnique.apply(null, characters.split(''));
