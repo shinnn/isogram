@@ -1,9 +1,9 @@
 # isogram
 
-[![NPM version](https://img.shields.io/npm/v/isogram.svg?style=flat)](https://www.npmjs.org/package/isogram)
-[![Build Status](https://img.shields.io/travis/shinnn/isogram.svg?style=flat)](https://travis-ci.org/shinnn/isogram)
+[![NPM version](https://img.shields.io/npm/v/isogram.svg)](https://www.npmjs.com/package/isogram)
+[![Build Status](https://travis-ci.org/shinnn/isogram.svg?branch=master)](https://travis-ci.org/shinnn/isogram)
 [![Build status](https://ci.appveyor.com/api/projects/status/oys8520d3746dnky?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/isogram)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg?style=flat)](https://coveralls.io/r/shinnn/isogram)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg)](https://coveralls.io/r/shinnn/isogram)
 [![Dependency Status](https://img.shields.io/david/shinnn/isogram.svg?style=flat&label=deps)](https://david-dm.org/shinnn/isogram)
 [![devDependency Status](https://img.shields.io/david/dev/shinnn/isogram.svg?style=flat&label=devDeps)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
@@ -40,9 +40,9 @@ After seeing that, I modularized Bynens's way as this program, *isogram*.
 
 Isn't it very useful? Indeed, it isn't. But, I think, *isogram* can surprise the poeple seeing the source code of your website, [such as Bynens's commit](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966#all_commit_comments "notes on commit").
 
-## Sites using *isogram*
+## Websites using *isogram*
 
-These are real examples using the code *isogram* generates.
+The real-life examples that uses the code *isogram* generates in their pages
 
 [apidoc]: <http://apidocjs.com/>
 [bsync]: <http://www.browsersync.io/>
@@ -92,7 +92,7 @@ isogram [parameters] [options]
 
 Default: `GoOgle`
 
-`[parameters]` need to be a **nonpattern** word with 3 and more or 7 and less characters, each of whom can be a valid JavaScript variable name.
+`[parameters]` need to be a **nonpattern** word with no fewer than 3 and no greater than 7 characters, each of whom can be a valid JavaScript variable name.
 
 For example, `yummy` is not valid, but `YuMmy` is valid.
 
@@ -136,7 +136,7 @@ You can use *isogram* as a JavaScript library instead of CLI.
 
 #### Package managers
 
-##### [npm](https://www.npmjs.org/) 
+##### [npm](https://www.npmjs.com/) 
 
 ```sh
 npm install isogram
@@ -203,9 +203,6 @@ isogram({domain: 'foo.example.com'}); //=> '!function( ... , \'foo.example.com\'
 ##### options.globalName
 
 Type: `String`  
-Default: `auto`
-
-Type: `String`  
 Default: `ga`
 
 Change [the global function name](https://developers.google.com/analytics/devguides/collection/analyticsjs/advanced#renaming).
@@ -237,6 +234,6 @@ Colorize the parameters with [ANSI escape code](http://wikipedia.org/wiki/ANSI_e
 
 ## License
 
-Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2013 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
