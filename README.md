@@ -46,6 +46,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 
 [apidoc]: <http://apidocjs.com/>
 [bsync]: <http://www.browsersync.io/>
+[lisense]: <http://choosealicense.com>
 [css]: <https://cssnext.github.io/>
 [doge]: <http://dogescript.com/>
 [gulp]: <http://gulpjs.com/>
@@ -60,6 +61,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | ----------------------------- | ---------------------------- | --------------------------- |
 | apiDoc                        | [apidocjs.com][apidoc]       | `a` `p` `i` `d` `o` `c`     |
 | BrowserSync                   | [browsersync.io][bsync]      | `s` `y` `n` `c` `I` `t`     |
+| Choose a License              | [choosealicense.com][license]| `L` `I` `C` `e` `N` `S` `E` |
 | cssnext                       | [cssnext.github.io][css]     | `c` `s` `S` `n` `e` `x` `t` |
 | Dogescript                    | [dogescript.com][doge]       | `W` `o` `w` `s` `u` `c` `h` |
 | gulp.js                       | [gulpjs.com][gulp]           | `g` `u` `l` `p` `j` `s`     |
