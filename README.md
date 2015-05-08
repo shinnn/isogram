@@ -46,29 +46,29 @@ The real-life examples that uses the code *isogram* generates in their pages
 
 [apidoc]: <http://apidocjs.com/>
 [bsync]: <http://www.browsersync.io/>
-[css]: <https://cssnext.github.io/>
+[license]: <http://choosealicense.com>
+[cssnext]: <https://cssnext.github.io/>
 [doge]: <http://dogescript.com/>
 [gulp]: <http://gulpjs.com/>
 [hapi]: <http://hapijs.com/>
 [jekyll]: <http://jekyllrb.com/>
 [kanyewest]: <http://kanyewest.com/>
-[shinN]: <https://shinnn.github.io/>
 [starico]: <https://stari.co/>
 [tmdpw]: <http://tmdpw.eu/>
 
-| Webite (A - Z)                | URL                          | Tracking code parameters    |
-| ----------------------------- | ---------------------------- | --------------------------- |
-| apiDoc                        | [apidocjs.com][apidoc]       | `a` `p` `i` `d` `o` `c`     |
-| BrowserSync                   | [browsersync.io][bsync]      | `s` `y` `n` `c` `I` `t`     |
-| cssnext                       | [cssnext.github.io][css]     | `c` `s` `S` `n` `e` `x` `t` |
-| Dogescript                    | [dogescript.com][doge]       | `W` `o` `w` `s` `u` `c` `h` |
-| gulp.js                       | [gulpjs.com][gulp]           | `g` `u` `l` `p` `j` `s`     |
-| hapi                          | [hapijs.com][hapi]           | `h` `a` `p` `i` `j` `s`     |
-| Jekyll                        | [jekyllrb.com][jekyll]       | `j` `e` `k` `y` `l` `L`     |
-| kanyewest.com                 | [kanyewest.com][kanyewest]   | `k` `a` `n` `y` `e`         |
-| Shinnosuke Watanabe's website | [shinnn.github.io][shinN]    | `s` `h` `i` `n` `N`         |
-| starico                       | [stari.co][starico]          | `s` `t` `a` `r` `i` `c` `o` |
-| Tim De Pauw's website         | [tmdpw.eu][tmdpw]            | `t` `m` `d` `p` `w` `e` `u` |
+| Webite (A - Z)                | URL                           | Tracking code parameters    |
+| ----------------------------- | ----------------------------- | --------------------------- |
+| apiDoc                        | [apidocjs.com][apidoc]        | `a` `p` `i` `d` `o` `c`     |
+| BrowserSync                   | [browsersync.io][bsync]       | `s` `y` `n` `c` `I` `t`     |
+| choosealicense.com            | [choosealicense.com][license] | `L` `I` `C` `e` `N` `S` `E` |
+| cssnext                       | [cssnext.github.io][cssnext]  | `c` `s` `S` `n` `e` `x` `t` |
+| Dogescript                    | [dogescript.com][doge]        | `W` `o` `w` `s` `u` `c` `h` |
+| gulp.js                       | [gulpjs.com][gulp]            | `g` `u` `l` `p` `j` `s`     |
+| hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
+| Jekyll                        | [jekyllrb.com][jekyll]        | `j` `e` `k` `y` `l` `L`     |
+| kanyewest.com                 | [kanyewest.com][kanyewest]    | `k` `a` `n` `y` `e`         |
+| starico                       | [stari.co][starico]           | `s` `t` `a` `r` `i` `c` `o` |
+| Tim De Pauw's website         | [tmdpw.eu][tmdpw]             | `t` `m` `d` `p` `w` `e` `u` |
 
 *[Feel free to create a pull request to add your site here.](https://github.com/shinnn/isogram/pulls)*
 
