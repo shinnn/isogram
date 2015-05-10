@@ -4,8 +4,8 @@
 [![Build Status](https://travis-ci.org/shinnn/isogram.svg?branch=master)](https://travis-ci.org/shinnn/isogram)
 [![Build status](https://ci.appveyor.com/api/projects/status/oys8520d3746dnky?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/isogram)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg)](https://coveralls.io/r/shinnn/isogram)
-[![Dependency Status](https://img.shields.io/david/shinnn/isogram.svg?style=flat&label=deps)](https://david-dm.org/shinnn/isogram)
-[![devDependency Status](https://img.shields.io/david/dev/shinnn/isogram.svg?style=flat&label=devDeps)](https://david-dm.org/shinnn/isogram#info=devDependencies)
+[![Dependency Status](https://img.shields.io/david/shinnn/isogram.svg?label=deps)](https://david-dm.org/shinnn/isogram)
+[![devDependency Status](https://img.shields.io/david/dev/shinnn/isogram.svg?label=devDeps)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
 Generate Google Analytics code with any *isogrammic* parameters you like
 
@@ -30,7 +30,7 @@ On the other hand, [the `index.html`](https://github.com/h5bp/html5-boilerplate/
 ```
 
 As you can see, its parameters are `b` `o` `i` `l` `e` `r`, different from the original's.
-This alteration full of fun is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on [the way of optimization and minification he blogged](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
+This amusing alteration is [authored by Mathias Bynens](https://github.com/h5bp/html5-boilerplate/commit/48d49e96d6db282eb9686d31ebbc5cbbbdd4d966 "Update to Google Universal Analytics"), based on [the way of optimization and minification he blogged](https://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics).
 
 After seeing that, I modularized Bynens's way as this program, *isogram*.
 
@@ -230,7 +230,7 @@ Default: `true`
 Type: `Boolean`  
 Default: `false`
 
-Colorize the parameters with [ANSI escape code](http://wikipedia.org/wiki/ANSI_escape_code#Colors).
+Colorize the parameters with [ANSI escape code](https://wikipedia.org/wiki/ANSI_escape_code#Colors).
 
 ## License
 
