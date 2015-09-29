@@ -1,10 +1,8 @@
 sudo: false
 git:
-  depth: 2
+  depth: 1
 language: node_js
-node_js:
-  - iojs
-  - node
+node_js: stable
 after_script:
   - npm run-script coveralls
 notifications:

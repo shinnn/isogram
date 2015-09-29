@@ -1,30 +1,11 @@
-init:
-  - git config --global core.autocrlf input
-
 shallow_clone: true
-
 version: '{build}'
-
 skip_tags: true
-
-environment:
-  matrix:
-    - nodejs_version: '2'
-    - nodejs_version: '0'
-
 install:
-  - ps: Install-Product node $env:nodejs_version
-  - npm install --global bower
-  - npm install --production
-  - npm install each-exec require-bower-files script-equal tape
-  - bower install
-
+  - ps: Install-Product node 5
+  - npm install
 build: off
-
-test_script:
-  - ps: 'npm run-script test-only #PowerShell'
-  - cmd: npm run-script test-only
-
+test_script: npm run-script test-only
 cache:
   - bower_components
   - node_modules
