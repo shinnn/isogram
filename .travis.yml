@@ -4,6 +4,8 @@ git:
 language: node_js
 node_js: stable
 after_script:
-  - npm run-script coveralls
+  - npm run-script coverage
+  - npm install istanbul-coveralls
+  - node node_modules/.bin/istanbul-coveralls
 notifications:
   email: false
