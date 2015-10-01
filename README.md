@@ -3,7 +3,7 @@
 [![NPM version](https://img.shields.io/npm/v/isogram.svg)](https://www.npmjs.com/package/isogram)
 [![Build Status](https://travis-ci.org/shinnn/isogram.svg?branch=master)](https://travis-ci.org/shinnn/isogram)
 [![Build status](https://ci.appveyor.com/api/projects/status/oys8520d3746dnky?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/isogram)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg)](https://coveralls.io/r/shinnn/isogram)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg)](https://coveralls.io/github/shinnn/isogram)
 [![Dependency Status](https://img.shields.io/david/shinnn/isogram.svg?label=deps)](https://david-dm.org/shinnn/isogram)
 [![devDependency Status](https://img.shields.io/david/dev/shinnn/isogram.svg?label=devDeps)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
@@ -47,11 +47,11 @@ The real-life examples that uses the code *isogram* generates in their pages
 [apidoc]: <http://apidocjs.com/>
 [bsync]: <http://www.browsersync.io/>
 [license]: <http://choosealicense.com>
-[cssnext]: <https://cssnext.github.io/>
+[cssnext]: <http://cssnext.io/>
 [doge]: <http://dogescript.com/>
 [gulp]: <http://gulpjs.com/>
 [hapi]: <http://hapijs.com/>
-[jekyll]: <http://jekyllrb.com/>
+[jekyll]: <https://jekyllrb.com/>
 [kanyewest]: <http://kanyewest.com/>
 [starico]: <https://stari.co/>
 [tmdpw]: <http://tmdpw.eu/>
@@ -61,7 +61,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | apiDoc                        | [apidocjs.com][apidoc]        | `a` `p` `i` `d` `o` `c`     |
 | BrowserSync                   | [browsersync.io][bsync]       | `s` `y` `n` `c` `I` `t`     |
 | choosealicense.com            | [choosealicense.com][license] | `L` `I` `C` `e` `N` `S` `E` |
-| cssnext                       | [cssnext.github.io][cssnext]  | `c` `s` `S` `n` `e` `x` `t` |
+| cssnext                       | [cssnext.io][cssnext]         | `c` `s` `S` `n` `e` `x` `t` |
 | Dogescript                    | [dogescript.com][doge]        | `W` `o` `w` `s` `u` `c` `h` |
 | gulp.js                       | [gulpjs.com][gulp]            | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
@@ -76,15 +76,15 @@ The real-life examples that uses the code *isogram* generates in their pages
 
 ### Installation
 
-[Use npm](https://www.npmjs.org/doc/cli/npm-install.html).
+[Use npm.](https://www.npmjs.org/doc/cli/npm-install.html)
 
-```sh
+```
 npm install --global isogram
 ```
 
 ### Usage
 
-```sh
+```
 isogram [parameters] [options]
 ```
 
@@ -98,7 +98,7 @@ For example, `yummy` is not valid, but `YuMmy` is valid.
 
 #### Options
 
-```sh
+```
 --id,       -i <ID>      Set web property ID
 --domain,   -d <domain>  Set domain
 --global,   -g <name>    Change global variable name ("ga" by default)
@@ -112,7 +112,7 @@ For example, `yummy` is not valid, but `YuMmy` is valid.
 
 #### Example
 
-```sh
+```
 isogram YoyOjs --id 12345678-9 --domain awesome-website.com
 ```
 
@@ -138,20 +138,14 @@ You can use *isogram* as a JavaScript library instead of CLI.
 
 ##### [npm](https://www.npmjs.com/) 
 
-```sh
+```
 npm install isogram
 ```
 
 ##### [Bower](http://bower.io/)
 
-```sh
-bower install isogram
 ```
-
-##### [Duo](http://duojs.org/)
-
-```javascript
-var isogram = require('shinnn/isogram');
+bower install isogram
 ```
 
 #### Standalone
