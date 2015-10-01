@@ -13,7 +13,7 @@ var isogram = require('./');
 var bin = 'node ' + pkg.bin + ' ';
 
 test('"isogram" command', function(t) {
-  t.plan(19);
+  t.plan(20);
 
   exec(bin, function(err, stdout, stderr) {
     t.deepEqual(
@@ -53,6 +53,14 @@ test('"isogram" command', function(t) {
       [err, stdout, stderr],
       [null, isogram({color: false}) + '\n', ''],
       'should omit ANSI colors from the result, using --no-color flag.'
+    );
+  });
+
+  exec(bin + '--no-track', function(err, stdout, stderr) {
+    t.deepEqual(
+      [err, stdout, stderr],
+      [null, isogram({track: false}) + '\n', ''],
+      'should omit `create` and `send` commands if using --no-track flag.'
     );
   });
 

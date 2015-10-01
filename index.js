@@ -83,5 +83,9 @@ module.exports = function isogram(characters, options) {
     return gaLoader.replace(/\n/g, '') + gaTracker;
   }
 
-  return gaLoader + '\n\n' + gaTracker;
+  if (options.track === undefined || options.track) {
+    return gaLoader + '\n\n' + gaTracker;
+  }
+
+  return gaLoader;
 };

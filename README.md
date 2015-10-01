@@ -106,6 +106,8 @@ For example, `yummy` is not valid, but `YuMmy` is valid.
 --minify,   -m           Minify output like UglifyJS
 --no-color,              Print code in a single color
 --color,    -c           Colorize parameters anyway (enabled by default)
+--no-track,              Just load, don't send a pageview
+--track,    -t           Send a pageview after loading (enabled by default)
 --help,     -h           Print usage information
 --version,  -v           Print version
 ```
@@ -225,6 +227,13 @@ Type: `Boolean`
 Default: `false`
 
 Colorize the parameters with [ANSI escape code](https://wikipedia.org/wiki/ANSI_escape_code#Colors).
+
+##### options.track
+
+Type: `Boolean`  
+Default: `true`
+
+`false` excludes `create` and `send` commands after the loading code.
 
 ## License
 

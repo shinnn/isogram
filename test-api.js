@@ -11,7 +11,7 @@ var gaTrackerSnippet = require('ga-tracker-snippet');
 
 function runTest(description, isogram) {
   test(description, function(t) {
-    t.plan(26);
+    t.plan(27);
 
     t.equal(isogram.name, 'isogram', 'should have a function name.');
 
@@ -98,6 +98,14 @@ function runTest(description, isogram) {
       isogram({singleQuotes: false}),
       isogram(null).replace(/'/g, '\"'),
       'should replace all the single quotes with double quotes, using `minify` option.'
+    );
+
+    t.ok(
+      scriptEqual(
+        isogram({track: false}),
+        gaLoaderSnippets.with6params
+      ),
+      'should not include the tracker snippet if `track` option is false.'
     );
 
     t.throws(
