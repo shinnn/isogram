@@ -8,5 +8,4 @@ build: off
 test_script: npm run-script test-only
 cache:
   - bower_components
-  - node_modules
-  - 'C:\Users\appveyor\AppData\Roaming\npm\node_modules'
+  - node_modules -> package.json
