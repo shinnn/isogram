@@ -84,31 +84,59 @@ module.exports = function isogram(characters, options) {
     return gaLoader.replace(/\n/g, '') + gaTracker;
   }
 
-  return gaLoader + '\n\n' + gaTracker;
+  if (options.track === undefined || options.track) {
+    return gaLoader + '\n\n' + gaTracker;
+  }
+
+  return gaLoader;
 };
 
-},{"array-to-sentence":2,"assert-unique":3,"ga-loader-snippets":5,"ga-tracker-snippet":6,"is-var-name":7}],2:[function(require,module,exports){
+},{"array-to-sentence":3,"assert-unique":4,"ga-loader-snippets":5,"ga-tracker-snippet":6,"is-var-name":7}],2:[function(require,module,exports){
+/*!
+ * array-duplicated | MIT (c) Shinnosuke Watanabe
+ * https://github.com/shinnn/array-duplicated
+*/
+module.exports = function arrayDuplicated(arr) {
+  'use strict';
+
+  if (!Array.isArray(arr)) {
+    throw new TypeError(
+      arr +
+      ' is not an array. Argument to array-duplicated  must be an array.'
+    );
+  }
+
+  var result = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr.indexOf(arr[i]) !== i && result.indexOf(arr[i]) === -1) {
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+};
+
+},{}],3:[function(require,module,exports){
 /*!
  * array-to-sentence | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/array-to-sentence
 */
-
 module.exports = function arrayToSentence(arr, options) {
   'use strict';
 
   if (!Array.isArray(arr)) {
-    throw new TypeError('First argument must be an array.');
-  }
-
-  if (arr.length === 0) {
-    return '';
+    throw new TypeError(String(arr) + ' is not an array. Expected an array .');
   }
 
   options = options || {};
 
-  function validateOption(name) {
-    if (typeof options[name] !== 'string') {
-      throw new TypeError('`' + name + '` option must be a string.');
+  function validateOption(optionName) {
+    if (typeof options[optionName] !== 'string') {
+      throw new TypeError(
+        String(options[optionName]) +
+        ' is not a string. ' +
+        '`' + optionName + '` option must be a string.'
+      );
     }
   }
 
@@ -124,14 +152,18 @@ module.exports = function arrayToSentence(arr, options) {
     validateOption('lastSeparator');
   }
 
+  if (arr.length === 0) {
+    return '';
+  }
+
   if (arr.length === 1) {
-    return arr[arr.length - 1];
+    return arr[0];
   }
 
   return arr.slice(0, -1).join(options.separator) + options.lastSeparator + arr[arr.length - 1];
 };
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /*!
  * assert-unique | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/assert-unique
@@ -177,30 +209,7 @@ module.exports = function assertUnique() {
   throw new Error(arrayToSentence(duplicates) + ' ' + aux + ' duplicated.');
 };
 
-},{"array-duplicated":4,"array-to-sentence":2}],4:[function(require,module,exports){
-/*!
- * array-duplicated | MIT (c) Shinnosuke Watanabe
- * https://github.com/shinnn/array-duplicated
-*/
-
-module.exports = function arrayDuplicated(arr) {
-  'use strict';
-
-  if (!Array.isArray(arr)) {
-    throw new TypeError('Argument must be an array.');
-  }
-
-  var result = [];
-  for (var i = 0; i < arr.length; i++) {
-    if (arr.indexOf(arr[i]) !== i && result.indexOf(arr[i]) === -1) {
-      result.push(arr[i]);
-    }
-  }
-
-  return result;
-};
-
-},{}],5:[function(require,module,exports){
+},{"array-duplicated":2,"array-to-sentence":3}],5:[function(require,module,exports){
 /*!
  * HTML5 Boilerplate | MIT (c) HTML5 Boilerplate
  * https://github.com/h5bp/html5-boilerplate
