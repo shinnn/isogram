@@ -9,6 +9,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     w: 'double',
     m: 'minify',
     c: 'color',
+    t: 'track',
     h: 'help',
     v: 'version'
   },
@@ -39,6 +40,8 @@ if (argv.version) {
     yellow('--double,   -w         ') + '  Use double quotes (single quotes by default)',
     yellow('--no-color,            ') + '  Print code in a single color',
     yellow('--color,    -c         ') + '  Colorize parameters anyway (enabled by default)',
+    yellow('--no-track,            ') + '  Just load, don\'t send a pageview',
+    yellow('--track,    -t         ') + '  Send a pageview after loading (enabled by default)',
     yellow('--help,     -h         ') + '  Print usage information',
     yellow('--version,  -v         ') + '  Print version',
     ''
