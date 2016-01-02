@@ -53,6 +53,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 [hapi]: <http://hapijs.com/>
 [jekyll]: <https://jekyllrb.com/>
 [kanyewest]: <http://kanyewest.com/>
+[gremots]: <https://gremots.com/>
 [starico]: <https://stari.co/>
 [tmdpw]: <http://tmdpw.eu/>
 
@@ -67,6 +68,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
 | Jekyll                        | [jekyllrb.com][jekyll]        | `j` `e` `k` `y` `l` `L`     |
 | kanyewest.com                 | [kanyewest.com][kanyewest]    | `k` `a` `n` `y` `e`         |
+| Gremots                       | [gremots.com][gremots]        | `g` `r` `e` `m` `o` `t` `s` |
 | starico                       | [stari.co][starico]           | `s` `t` `a` `r` `i` `c` `o` |
 | Tim De Pauw's website         | [tmdpw.eu][tmdpw]             | `t` `m` `d` `p` `w` `e` `u` |
 
