@@ -53,6 +53,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 [hapi]: <http://hapijs.com/>
 [jekyll]: <https://jekyllrb.com/>
 [kanyewest]: <http://kanyewest.com/>
+[gremots]: <https://gremots.com/>
 [starico]: <https://stari.co/>
 [tmdpw]: <http://tmdpw.eu/>
 
@@ -63,6 +64,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | choosealicense.com            | [choosealicense.com][license] | `L` `I` `C` `e` `N` `S` `E` |
 | cssnext                       | [cssnext.io][cssnext]         | `c` `s` `S` `n` `e` `x` `t` |
 | Dogescript                    | [dogescript.com][doge]        | `W` `o` `w` `s` `u` `c` `h` |
+| Gremots                       | [gremots.com][gremots]        | `g` `r` `e` `m` `o` `t` `s` |
 | gulp.js                       | [gulpjs.com][gulp]            | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
 | Jekyll                        | [jekyllrb.com][jekyll]        | `j` `e` `k` `y` `l` `L`     |
