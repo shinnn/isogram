@@ -64,11 +64,11 @@ The real-life examples that uses the code *isogram* generates in their pages
 | choosealicense.com            | [choosealicense.com][license] | `L` `I` `C` `e` `N` `S` `E` |
 | cssnext                       | [cssnext.io][cssnext]         | `c` `s` `S` `n` `e` `x` `t` |
 | Dogescript                    | [dogescript.com][doge]        | `W` `o` `w` `s` `u` `c` `h` |
+| Gremots                       | [gremots.com][gremots]        | `g` `r` `e` `m` `o` `t` `s` |
 | gulp.js                       | [gulpjs.com][gulp]            | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
 | Jekyll                        | [jekyllrb.com][jekyll]        | `j` `e` `k` `y` `l` `L`     |
 | kanyewest.com                 | [kanyewest.com][kanyewest]    | `k` `a` `n` `y` `e`         |
-| Gremots                       | [gremots.com][gremots]        | `g` `r` `e` `m` `o` `t` `s` |
 | starico                       | [stari.co][starico]           | `s` `t` `a` `r` `i` `c` `o` |
 | Tim De Pauw's website         | [tmdpw.eu][tmdpw]             | `t` `m` `d` `p` `w` `e` `u` |
 
