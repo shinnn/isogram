@@ -51,6 +51,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 [doge]: <http://dogescript.com/>
 [gulp]: <http://gulpjs.com/>
 [hapi]: <http://hapijs.com/>
+[inktweb]: <https://www.inktweb.nl/>
 [jekyll]: <https://jekyllrb.com/>
 [kanyewest]: <http://kanyewest.com/>
 [starico]: <https://stari.co/>
@@ -65,6 +66,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | Dogescript                    | [dogescript.com][doge]        | `W` `o` `w` `s` `u` `c` `h` |
 | gulp.js                       | [gulpjs.com][gulp]            | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
+| Inktweb.nl                    | [inktweb.nl][inktweb]         | `i` `n` `k` `t` `w` `e` `b` |
 | Jekyll                        | [jekyllrb.com][jekyll]        | `j` `e` `k` `y` `l` `L`     |
 | kanyewest.com                 | [kanyewest.com][kanyewest]    | `k` `a` `n` `y` `e`         |
 | starico                       | [stari.co][starico]           | `s` `t` `a` `r` `i` `c` `o` |
