@@ -49,6 +49,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 [license]: <http://choosealicense.com>
 [cssnext]: <http://cssnext.io/>
 [doge]: <http://dogescript.com/>
+[muffins]: <http://gomuffinsgo.com/>
 [gulp]: <http://gulpjs.com/>
 [hapi]: <http://hapijs.com/>
 [inktweb]: <https://www.inktweb.nl/>
@@ -64,6 +65,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | choosealicense.com            | [choosealicense.com][license] | `L` `I` `C` `e` `N` `S` `E` |
 | cssnext                       | [cssnext.io][cssnext]         | `c` `s` `S` `n` `e` `x` `t` |
 | Dogescript                    | [dogescript.com][doge]        | `W` `o` `w` `s` `u` `c` `h` |
+| Go, muffins go!               | [gomuffinsgo.com][muffins]    | `M` `U` `F` `f` `I` `N` `S` |
 | gulp.js                       | [gulpjs.com][gulp]            | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
 | Inktweb.nl                    | [inktweb.nl][inktweb]         | `i` `n` `k` `t` `w` `e` `b` |
