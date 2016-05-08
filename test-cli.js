@@ -13,7 +13,7 @@ var isogram = require('./');
 var bin = 'node ' + pkg.bin + ' ';
 
 test('"isogram" command', function(t) {
-  t.plan(20);
+  t.plan(22);
 
   exec(bin, function(err, stdout, stderr) {
     t.deepEqual(
@@ -61,6 +61,22 @@ test('"isogram" command', function(t) {
       [err, stdout, stderr],
       [null, isogram({track: false}) + '\n', ''],
       'should omit `create` and `send` commands if using --no-track flag.'
+    );
+  });
+
+  exec(bin + '-s', function(err, stdout, stderr) {
+    t.deepEqual(
+      [err, stdout, stderr],
+      [null, isogram({scriptTag: true}) + '\n', ''],
+      'should use -s as an alias of --script-tag.'
+    );
+  });
+
+  exec(bin + '--script-tag', function(err, stdout, stderr) {
+    t.deepEqual(
+      [err, stdout, stderr],
+      [null, isogram({scriptTag: true}) + '\n', ''],
+      'should add <script> tag if using --script flag.'
     );
   });
 

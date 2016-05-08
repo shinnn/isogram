@@ -80,12 +80,16 @@ module.exports = function isogram(characters, options) {
     gaLoader = gaLoader.replace(/"/g, '\'');
   }
 
-  if (options.minify) {
-    return gaLoader.replace(/\n/g, '') + gaTracker;
+  if (options.track === undefined || options.track) {
+    gaLoader = gaLoader + '\n\n' + gaTracker;
   }
 
-  if (options.track === undefined || options.track) {
-    return gaLoader + '\n\n' + gaTracker;
+  if (options.scriptTag) {
+    gaLoader = '<script>\n' + gaLoader + '\n</script>';
+  }
+
+  if (options.minify) {
+    gaLoader = gaLoader.replace(/\n/g, '');
   }
 
   return gaLoader;
@@ -125,7 +129,7 @@ module.exports = function arrayToSentence(arr, options) {
   'use strict';
 
   if (!Array.isArray(arr)) {
-    throw new TypeError(String(arr) + ' is not an array. Expected an array .');
+    throw new TypeError(String(arr) + ' is not an array. Expected an array.');
   }
 
   options = options || {};
