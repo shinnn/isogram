@@ -9,9 +9,16 @@ var test = require('tape');
 
 var gaTrackerSnippet = require('ga-tracker-snippet');
 
+var scriptTagPattern = /^<script>((?:.|\n)*?)<\/script>$/;
+
+function extractCode(snippet) {
+  var match = snippet.match(scriptTagPattern)[1];
+  return match;
+}
+
 function runTest(description, isogram) {
   test(description, function(t) {
-    t.plan(27);
+    t.plan(31);
 
     t.equal(isogram.name, 'isogram', 'should have a function name.');
 
@@ -106,6 +113,32 @@ function runTest(description, isogram) {
         gaLoaderSnippets.with6params
       ),
       'should not include the tracker snippet if `track` option is false.'
+    );
+
+    t.ok(
+      scriptTagPattern.test(isogram({scriptTag: true})),
+      'should surround the code with script tags, using `scriptTag` option.'
+    );
+
+    t.ok(
+      scriptTagPattern.test(isogram({scriptTag: true, id: '36461297-3'})),
+      'should surround the code and tracker with script tags, using `scriptTag` option.'
+    );
+
+    t.ok(
+      scriptEqual(
+        extractCode(isogram({scriptTag: true})),
+        gaLoaderSnippets.with6params + gaTrackerSnippet()
+      ),
+      'should have normal inner code when using `scriptTag`'
+    );
+
+    t.ok(
+      scriptEqual(
+        extractCode(isogram({scriptTag: true, id: '36461297-3'})),
+        gaLoaderSnippets.with6params + gaTrackerSnippet({id: '36461297-3'})
+      ),
+      'should have normal inner code, even when using tracker.'
     );
 
     t.throws(
