@@ -58,6 +58,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 [kanyewest]: <http://kanyewest.com/>
 [starico]: <https://stari.co/>
 [tmdpw]: <http://tmdpw.eu/>
+[zespi]: <http://zacharyespiritu.com/>
 
 | Webite (A - Z)                | URL                           | Tracking code parameters    |
 | ----------------------------- | ----------------------------- | --------------------------- |
@@ -75,6 +76,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | kanyewest.com                 | [kanyewest.com][kanyewest]    | `k` `a` `n` `y` `e`         |
 | starico                       | [stari.co][starico]           | `s` `t` `a` `r` `i` `c` `o` |
 | Tim De Pauw's website         | [tmdpw.eu][tmdpw]             | `t` `m` `d` `p` `w` `e` `u` |
+| Zachary Espiritu's website    | [zacharyespiritu.com][zespi]  | `z` `a` `c` `h` `A` `r` `y` |
 
 *[Feel free to create a pull request to add your site here.](https://github.com/shinnn/isogram/pulls)*
 
