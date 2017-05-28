@@ -50,6 +50,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 [license]: <http://choosealicense.com>
 [cssnext]: <http://cssnext.io/>
 [doge]: <http://dogescript.com/>
+[donavonblog]: <http://donavon.js.org/>
 [muffins]: <http://gomuffinsgo.com/>
 [gulp]: <http://gulpjs.com/>
 [hapi]: <http://hapijs.com/>
@@ -68,6 +69,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | choosealicense.com            | [choosealicense.com][license] | `L` `I` `C` `e` `N` `S` `E` |
 | cssnext                       | [cssnext.io][cssnext]         | `c` `s` `S` `n` `e` `x` `t` |
 | Dogescript                    | [dogescript.com][doge]        | `W` `o` `w` `s` `u` `c` `h` |
+| Donavon West's blog           | [donavon.js.org][donavonblog] | `D` `o` `N` `a` `V` `O` `n` |
 | Go, muffins go!               | [gomuffinsgo.com][muffins]    | `M` `U` `F` `f` `I` `N` `S` |
 | gulp.js                       | [gulpjs.com][gulp]            | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
@@ -146,7 +148,7 @@ You can use *isogram* as a JavaScript library instead of CLI.
 
 #### Package managers
 
-##### [npm](https://www.npmjs.com/) 
+##### [npm](https://www.npmjs.com/)
 
 ```
 npm install isogram
