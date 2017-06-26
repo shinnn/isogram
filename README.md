@@ -60,6 +60,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 [starico]: <https://stari.co/>
 [tmdpw]: <http://tmdpw.eu/>
 [zespi]: <http://zacharyespiritu.com/>
+[futhark]: <https://futhark.acwpd.com/>
 
 | Webite (A - Z)                | URL                           | Tracking code parameters    |
 | ----------------------------- | ----------------------------- | --------------------------- |
@@ -70,6 +71,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 | cssnext                       | [cssnext.io][cssnext]         | `c` `s` `S` `n` `e` `x` `t` |
 | Dogescript                    | [dogescript.com][doge]        | `W` `o` `w` `s` `u` `c` `h` |
 | Donavon West's blog           | [donavon.js.org][donavonblog] | `D` `o` `N` `a` `V` `O` `n` |
+| Futhark Generator for Worm    | [futhark.acwpd.com][futhark]  | `f` `u` `t` `h` `a` `r` `k` |
 | Go, muffins go!               | [gomuffinsgo.com][muffins]    | `M` `U` `F` `f` `I` `N` `S` |
 | gulp.js                       | [gulpjs.com][gulp]            | `g` `u` `l` `p` `j` `s`     |
 | hapi                          | [hapijs.com][hapi]            | `h` `a` `p` `i` `j` `s`     |
