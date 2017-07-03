@@ -61,7 +61,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 [tmdpw]: <http://tmdpw.eu/>
 [zespi]: <http://zacharyespiritu.com/>
 
-| Webite (A - Z)                | URL                           | Tracking code parameters    |
+| Website (A - Z)                | URL                           | Tracking code parameters    |
 | ----------------------------- | ----------------------------- | --------------------------- |
 | apiDoc                        | [apidocjs.com][apidoc]        | `a` `p` `i` `d` `o` `c`     |
 | BrowserSync                   | [browsersync.io][bsync]       | `s` `y` `n` `c` `I` `t`     |
