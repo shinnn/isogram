@@ -1,11 +1,6 @@
-sudo: false
-git:
-  depth: 1
+dist: xenial
 language: node_js
-node_js: stable
-after_script:
+node_js: node
+after_success:
   - npm run-script coverage
-  - npm install istanbul-coveralls
-  - node node_modules/.bin/istanbul-coveralls
-notifications:
-  email: false
+  - npx istanbul-coveralls
