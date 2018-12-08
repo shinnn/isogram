@@ -1,6 +1,8 @@
-dist: xenial
 language: node_js
 node_js: node
-after_success:
-  - npm run-script coverage
-  - npx istanbul-coveralls
+matrix:
+  include:
+  - dist: xenial
+    after_success: npm run-script coverage && npx istanbul-coveralls
+  - os: windows
+    script: npm run-script test-only

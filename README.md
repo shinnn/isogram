@@ -1,11 +1,8 @@
 # isogram
 
-[![NPM version](https://img.shields.io/npm/v/isogram.svg)](https://www.npmjs.com/package/isogram)
+[![npm version](https://img.shields.io/npm/v/isogram.svg)](https://www.npmjs.com/package/isogram)
 [![Build Status](https://travis-ci.org/shinnn/isogram.svg?branch=master)](https://travis-ci.org/shinnn/isogram)
-[![Build status](https://ci.appveyor.com/api/projects/status/oys8520d3746dnky?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/isogram)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg)](https://coveralls.io/github/shinnn/isogram)
-[![Dependency Status](https://img.shields.io/david/shinnn/isogram.svg?label=deps)](https://david-dm.org/shinnn/isogram)
-[![devDependency Status](https://img.shields.io/david/dev/shinnn/isogram.svg?label=devDeps)](https://david-dm.org/shinnn/isogram#info=devDependencies)
 
 Generate Google Analytics code with any *isogrammic* parameters you like
 
@@ -23,7 +20,7 @@ Here is the default tracking code of [Google Analytics](https://developers.googl
 
 It has the immediate invoked function with seven parameters `i` `s` `o` `g` `r` `a` `m`.
 
-On the other hand, [the `index.html`](https://github.com/h5bp/html5-boilerplate/blob/master/src/index.html) of [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) includes the following tracking code:
+On the other hand, [the `index.html`](https://github.com/h5bp/html5-boilerplate/blob/5.3.0/src/index.html) of [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) includes the following tracking code:
 
 ```javascript
 (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
@@ -86,7 +83,7 @@ The real-life examples that uses the code *isogram* generates in their pages
 
 ### Installation
 
-[Use npm.](https://www.npmjs.org/doc/cli/npm-install.html)
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install --global isogram
@@ -154,7 +151,7 @@ You can use *isogram* as a JavaScript library instead of CLI.
 npm install isogram
 ```
 
-##### [Bower](http://bower.io/)
+##### [Bower](https://bower.io/)
 
 ```
 bower install isogram
@@ -247,6 +244,6 @@ Default: `true`
 
 ## License
 
-Copyright (c) 2013 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2013 - 2018 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
