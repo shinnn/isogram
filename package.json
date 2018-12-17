@@ -1,6 +1,6 @@
 {
   "name": "isogram",
-  "version": "0.6.0",
+  "version": "0.7.0-0",
   "description": "Generate Google Analytics snippet with any 'isogrammic' parameters you like",
   "repository": "shinnn/isogram",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
