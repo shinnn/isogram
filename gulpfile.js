@@ -4,7 +4,6 @@
 var spawn = require('child_process').spawn;
 
 var $ = require('gulp-load-plugins')();
-var bowerInstall = require('bower').commands.install;
 var browserify = require('browserify');
 var gulp = require('gulp');
 var mergeStream = require('merge-stream');
@@ -13,9 +12,6 @@ var source = require('vinyl-source-stream');
 var stylish = require('jshint-stylish');
 var tapSpec = require('tap-spec');
 var toCamelCase = require('to-camel-case');
-
-var bower = require('./bower.json');
-var bowerDeps = Object.keys(bower.dependencies).map(toCamelCase);
 
 gulp.task('lint', function() {
   gulp.src('*.js')
@@ -26,10 +22,6 @@ gulp.task('lint', function() {
   gulp.src('*.json')
     .pipe($.jsonlint())
     .pipe($.jsonlint.reporter());
-});
-
-gulp.task('bower-install', function() {
-  return bowerInstall();
 });
 
 gulp.task('clean', rimraf.bind(null, 'dist'));

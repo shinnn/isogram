@@ -1,7 +1,7 @@
 # isogram
 
 [![npm version](https://img.shields.io/npm/v/isogram.svg)](https://www.npmjs.com/package/isogram)
-[![Build Status](https://travis-ci.org/shinnn/isogram.svg?branch=master)](https://travis-ci.org/shinnn/isogram)
+[![Build Status](https://travis-ci.com/shinnn/isogram.svg?branch=master)](https://travis-ci.com/shinnn/isogram)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/isogram.svg)](https://coveralls.io/github/shinnn/isogram)
 
 Generate Google Analytics code with any *isogrammic* parameters you like
@@ -149,12 +149,6 @@ You can use *isogram* as a JavaScript library instead of CLI.
 
 ```
 npm install isogram
-```
-
-##### [Bower](https://bower.io/)
-
-```
-bower install isogram
 ```
 
 #### Standalone
